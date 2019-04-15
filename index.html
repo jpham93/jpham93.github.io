@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>James Pham</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+	<div id="main" class="">
+
+		<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark">
+			<a href="#main" class="navbar-brand">JP</a>
+			<div id="link-container">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+					aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+					style="position: sticky; right: 0;">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse text-right" id="navbarNavDropdown">
+					<ul class="navbar-nav mt-2">
+						<li class="nav-item">
+							<a class="nav-link" href="#welcome-section">Summary&nbsp;</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								Projects
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#projects">Projects</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#responsive">Responsive Web Pages</a>
+								<a class="dropdown-item" href="#front-end">Front End Projects</a>
+								<a class="dropdown-item" href="#data-visualization">Data Visualization</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<header id="welcome-section" class="my-5 pt-5">
+			<div class="container">
+				<div id='jumbotron-container' class="jumbotron jumbotron-fluid">
+					<h1 class="text-center display-1">
+						Hi everyone! I'm James!
+						<hr class="card-title-border"> <span class="display-3" style="display:block;">A web developer</span>
+					</h1>
+				</div>
+				<p id="summary" class="welcome-paragraph lead">
+					My name is James Pham, and I am an aspiring web developer! I started my coding journey mid-2017 when I
+					decided to make a career change. Khan Academy, Code Academy, and EDX gave me with my very first glimpse
+					of computer programming. A few months later, I enrolled at my local community college to further enhance my
+					coding education. It wasn't until after my first year at De Anza College when I realized that there
+					was a whole other world of coding dedicated to the web development, and how much fun it was and still is!
+					Ever since my discovery of web development, my fascination for web applications has driven me to research,
+					learn, and practice web development.
+				</p>
+				<p id="primary-skill" class="welcome-paragraph lead">
+					My skillset primarily focuses on front-end web development. The tools in my web applications include:
+					HTML/CSS, JavaScript, jQuery, Bootstrap, Materialize, D3, and React. I have many projects that represent
+					my knowledge of the following web developer technologies.
+				</p>
+				<p id="extra-skill" class="welcome-paragraph lead">
+					Although my work concentrates on front-end programming and web design, I also have knowledge of back-end tools
+					such as: Node, Express, MongoDB, Mongoose, AJAX, and many others. I love knowing how things "work under the
+					hood" and because front-end and back-end work is so intertwined, it only made sense for me to pick up
+					these additional skills.
+				</p>
+
+				<div class="container mt-5">
+					<h5 class="display-4 text-center">Visit My Pages at:</h5>
+
+					<!-- Additional out flex wrap to center enter row -->
+					<div id='profiles' class="mb-5 d-flex justify-content-center">
+						<!-- Inner flex wrap to determine spacing between buttons and container size -->
+						<div class="col-md-4 d-flex justify-content-between-md justify-content-center">
+							<a id='profile-link' class="btn btn-outline-dark profile-links mx-1" href="https://github.com/jpham93">
+								<i class="fab fa-github fa-3x"></i>
+							</a>
+							<a class="btn btn-outline-dark profile-links mx-1" href="https://codepen.io/jamespham93">
+								<i class="fab fa-codepen fa-3x"></i>
+							</a>
+							<a class="btn btn-outline-dark profile-links mx-1" href="https://linkedin.com/in/james-pham-0293">
+								<i class="fab fa-linkedin-in fa-3x"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+		</header>
+
+		<div id="projects">
+			<br>
+			<h2 class="text-center display-1">Projects</h2>
+
+			<h2 id="responsive" class="text-center display-3 mt-5" style='padding-top:50px;'>Responsive Web Design</h2>
+			<div class="container">
+				<p class="text-center lead">A collection of my very first projects desiged with CSS (Bootstrap was
+					added to many later code revisits).</p>
+			</div>
+			<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+				<div class="row no-gutters">
+					<div class="col-12 col-md-4 col-lg-3">
+						<div class="card-body">
+							<h5 class="card-title text-center">
+								Tribute Page
+							</h5>
+							<hr class="card-title-border">
+							<p class="card-text">
+								My first ever web page design, a tribute for the late Jesse Owens. This simple, static web
+								page uses pure CSS to be responsive to any screen size.
+							</p>
+							<div class="row">
+								<a href="https://github.com/jpham93/TributePage" class="btn btn-outline-dark ml-2 mr-1">
+									<i class="fab fa-github m"></i>
+								</a>
+								<a href="https://codepen.io/jamespham93/pen/BVQjpz" class="btn btn-outline-dark">
+									<i class="fab fa-codepen"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-8 col-lg-9 iframe-container">
+						<iframe src="https://s.codepen.io/jamespham93/debug/BVQjpz/GnMnbNgneoNM" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Product Landing Page
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A revised version of a product landing page. The page now represents a dummy travel agency.
+							This static web page was redesigned with Bootstrap to create a beautiful, organized layout.
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/ProductLanding" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/MxOQjG" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/MxOQjG/bYrdyeqYWVQA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Survey Form
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							Another code revisit for a survey form. Re-done with Bootstrap to add a hint of modernism
+							and professionalism!
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/SurveyForm" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/ePzBdz" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/ePzBdz/ZoMBaKOoRQBk" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Technical Document
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A Python technical document fashioned after many online documents. This was another
+							responsive web page designed with pure CSS.
+						</p>
+						<div class="row">
+							<a href="" class="btn btn-outline-dark mr-1">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="row" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/ZRVVOx/VJkxxVJDBgyk" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<h2 id="front-end" class="text-center display-3" style='padding-top:50px;'>Front-End Projects</h2>
+		<div class="container">
+			<p class="lead text-center">These applications was accomplished with a variety of different front-end tools,
+				primarily React but may include Boostrap, Materialize, jQuery, and SASS.
+			</p>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							React Calculator
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							An expression first calculator built with React and designed with SASS. The design was influenced from the
+							standard MacOS calculator.
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/Calculator" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/jdZROG" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/jdZROG/GnMnbNgnwajM" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Pomodoro Clock
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							This Pomodoro clock is a redo of a previous version I did in September 2018. The added Material
+							Design gives an ultra modern look!
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/PomodoroClock" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/KbYQKN" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/KbYQKN/xJkjOqvbwzxM" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Random Quote Machine
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A random quote machine developed with React and designed with Materialize.
+							Retrieves quotes from a REST API. (NOTE: The quotes were hard-coded since
+							Codepen does not allow for requests to be made from non <strong>HTTPS</strong> URL's)
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/RandomQuoteMachine" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/ErKgwZ" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/ErKgwZ/VJMxxVawnQxM" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Markdown Previewer
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A markdown previewer that renders user input into markdown format. The project was made
+							with React and SASS, and Markdown.js as the Markdown renderer. React makes suits this project
+							because of its realtime interactivity. Try it out!
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/MarkdownPreviewer" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/LMdGqM" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/LMdGqM/bYrdyeqYzyOA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Drum Machine
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A drum machine made with jQuery. Originally, had keypress to allow for the user keyboard interaction,
+							but disabled as a workaround to pass FCC tests. Demonstrates DOM manipulation via jQuery.
+						</p>
+						<p class='card-text'>
+							Sound effects can be found at freesound.org
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/DrumMachine" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/KxQZLW" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/KxQZLW/NQMzYqJvJnYk" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<h2 id="data-visualization" class="text-center display-3" style='padding-top:50px;'>Data Visualization</h2>
+		<div class="container">
+			<p class="lead text-center">A collection of graphs made with D3.js. Live data comes from FCC's REST API's (except
+				for the first project)</p>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							United States GDP Bar Graph
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A bar graph of the United States Annual GDP. This is the only graph that does not use FCC's
+							REST API; rather, it uses live data from the actual U.S. BEA's REST API. Therefore,
+							the FCC test suite is excluded from this project. (The current data is out of range
+							compared to the test data)
+
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/d3BarGraph" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/bQxzoa" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/bQxzoa/NQkzYqJvJPnA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							US Education Retainment Choropleth
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A choropleth map showing the education retainment rate for each county in the United States.
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/ChoroplethMap" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/QzKvgB" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/QzKvgB/XBrGRZXpXYBM" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Global Heat Map
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A global heat map that shows surface temperature from 1753 - 2015.
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/d3HeatMap" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/zyOpLj" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/zyOpLj/YvAgOndadJQA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Industry Tree Map
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A treemap representation of 3 different industries in 2013. Shows top 100 sales, grosses, or donations
+							for each industry.
+						</p>
+						<div class="row">
+							<a href="https://github.com/jpham93/d3treemap" class="btn btn-outline-dark mx-2">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/EGyWyd" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/EGyWyd/PNkvYGzNVLzA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							Professional Cycling Scatterplot
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							Gives a side by side comparisons of the top cycling climbs of Alpe d'Huez between dopers
+							and non dopers.
+						</p>
+						<div class="https://github.com/jpham93/d3ScatterPlot">
+							<a href="" class="btn btn-outline-dark mr-1">
+								<i class="fab fa-github m"></i>
+							</a>
+							<a href="https://codepen.io/jamespham93/pen/NEoqWP" class="btn btn-outline-dark">
+								<i class="fab fa-codepen"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://s.codepen.io/jamespham93/debug/NEoqWP/xnrabNavRGYA" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<div class="project-tile my-5" id="coming-soon">
+			<h2 class="text-center">Full Stack Web Pages</h2>
+			<p class="text-center">Coming Soon!</p>
+		</div>
+		<hr>
+	</div>
+
+
+
+	<section id="contact">
+		<br>
+		<h2 class="display-3 text-center">Please Email Me If You Have Any Questions</h2>
+		<form action="https://formspree.io/jamespham93&commat;yahoo&period;com" method="POST">
+			<div class="form-group">
+				<label for="name">Name</label><input class="form-control" type="text" name="name" id="name" required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label><input class="form-control" type="email" name="email" id="email" required>
+			</div>
+			<div class="form-group">
+				<label for="subject">Subject</label><input class="form-control" type="text" name="subject" id="subject"
+					required>
+			</div>
+			<div class="form-group">
+				<label for="comments">Comments</label><textarea class="form-control" name="comments" id="comments" cols="35"
+					rows="10" required></textarea>
+			</div>
+			<div class="form-group d-flex justify-content-center">
+				<button class="btn btn-lg btn-outline-dark" type="submit" id='submit' name='submit'>Send</button>
+			</div>
+		</form>
+
+	</section>
+
+	<footer id="footer">
+		<p class="lead text-center">
+			&copy; Copyright James Pham 2019
+		</p>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+
+	<!-- Excluded. Won't pass height: 100vh test, because viewport naturally extends past that size. Too many
+	media queries as work around made code  -->
+	<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>

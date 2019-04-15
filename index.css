@@ -1,0 +1,184 @@
+body {
+		background: linear-gradient(to right, #abbaab, #FFFFFF);
+		max-width: 100vw;
+		/* margin: auto; */
+		font-family: 'Muli', sans-serif !important;
+}
+
+nav#navbar.navbar, footer#footer {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+	background: linear-gradient(#232526, #414345);
+}
+
+#link-container {
+	position: relative;
+	/* Flex properties to prevent hamburger from sticking to left side of parent container */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+}
+
+#navbarNavDropdown {
+	z-index: 10px;
+}
+
+#welcome-section {
+		min-height: 100vh; 
+		/* height: 100vh; FOR FCC TESTING */
+}
+
+iframe {
+    width: 100%;
+		height: 400px;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+div.project-tile.card.container {
+	padding-top: 5px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background: linear-gradient( 45deg, #d7d2cc, #bdd1e0, #d7d2cc) ;
+	border:none; 
+}
+
+h2.display-1, h2.display-3 {
+	margin-top: 100px;
+}
+
+/* Required to round button with free bootstrap version */
+a.profile-links {
+	border-radius: 50%;
+	height:75px;
+	width: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h5.card-title {
+	color: #2C3335;
+}
+
+hr.card-title-border {
+	border: 0;
+	height: 1px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#contact {
+	margin: 200px 0;
+}
+
+section#contact {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+input, textarea {
+	max-width:600px;
+}
+
+#submit {
+	margin: auto;
+}
+
+footer#footer {
+	color:white;
+	text-align: center;
+	padding: 5px;
+}
+
+/* Media Queries */
+
+@media (min-width: 993px) {
+	#link-container {
+		position: absolute;
+		right: 10px;
+	}
+}
+
+@media (max-width: 750px) {
+	html {
+		font-size: 1.2em;	/* more visibility for mobile/tablet reader */
+	}
+
+	#main {
+		width: 95%;
+		margin: auto;
+	}
+
+	.welcome-paragraph {
+		width:90%;
+		margin: 20px auto;
+		font-size: 0.9em;
+	}
+
+	h1.display-1, h2.display-3, span.display-3 {
+		font-size: 40px;
+	}
+
+	h2.display-1 {
+		font-size: 50px;
+	}
+
+	section#contact {
+		width: 90%;
+	}
+}
+
+@media (min-width: 576px) {
+
+	iframe {
+			min-width: 100%;
+			height: 500px;
+	}
+}
+
+@media (max-width: 300px) {
+
+	.welcome-paragraph{
+		text-align: center;
+	}
+
+}
+
+/* Animation Classes */
+
+.fadeIn {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+.fadeOut {
+	opacity: 0;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
