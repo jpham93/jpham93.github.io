@@ -6,12 +6,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>James Pham</title>
+
+	<!-- CSS -->
 	<link rel="stylesheet" href="index.css">
+
+	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+	<!-- Icon for Tab -->
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon.ico">
 </head>
 
 <body>
@@ -41,6 +53,7 @@
 								<a class="dropdown-item" href="#responsive">Responsive Web Pages</a>
 								<a class="dropdown-item" href="#front-end">Front End Projects</a>
 								<a class="dropdown-item" href="#data-visualization">Data Visualization</a>
+								<a href="#full-stack" class="dropdown-item">Full Stack</a>
 							</div>
 						</li>
 						<li class="nav-item">
@@ -508,8 +521,8 @@
 							Gives a side by side comparisons of the top cycling climbs of Alpe d'Huez between dopers
 							and non dopers.
 						</p>
-						<div class="https://github.com/jpham93/d3ScatterPlot">
-							<a href="" class="btn btn-outline-dark mr-1">
+						<div class="row">
+							<a href="https://github.com/jpham93/d3ScatterPlot" class="btn btn-outline-dark mx-2">
 								<i class="fab fa-github m"></i>
 							</a>
 							<a href="https://codepen.io/jamespham93/pen/NEoqWP" class="btn btn-outline-dark">
@@ -524,13 +537,38 @@
 			</div>
 		</div>
 
-		<div class="project-tile my-5" id="coming-soon">
-			<h2 class="text-center">Full Stack Web Pages</h2>
-			<p class="text-center">Coming Soon!</p>
+		<h2 id="full-stack" class="text-center display-3" style='padding-top:50px;'>Full Stack Web Pages</h2>
+		<div class="container">
+			<p class="lead text-center">Full stack web pages that uses Express, Node, and a database.</p>
 		</div>
-		<hr>
-	</div>
 
+		<div class="project-tile col-12 col-md-9 col-lg-9 card mb-3 container">
+			<div class="row no-gutters">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							YelpCamp
+						</h5>
+						<hr class="card-title-border">
+						<p class="card-text">
+							A Yelp clone with a campgrounds theme. The web application comes with fully function user
+							login, user verification, posts, and comments.
+						</p>
+						<div class="row">
+							<a href="https://enigmatic-castle-21351.herokuapp.com/" class="btn btn-outline-dark mx-2">
+								<i class="fas fa-link m"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-8 col-lg-9 iframe-container">
+					<iframe src="https://enigmatic-castle-21351.herokuapp.com/" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr>
 
 
 	<section id="contact">

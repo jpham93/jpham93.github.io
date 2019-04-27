@@ -30,6 +30,7 @@ $(window).scroll(() => {
   for (let i = 0; i < tileList.length; i++) {
     isElementInViewport(tileList[i]) ?
       $(tileList[i]).addClass('fadeIn') && $(tileList[i]).removeClass('fadeOut') :
-      $(tileList[i]).addClass('fadeOut') && $(tileList[i]).removeClass('fadeIn')
+      null
+    // $(tileList[i]).addClass('fadeOut') && $(tileList[i]).removeClass('fadeIn') // removed fading out. Too much animation and lag on page
   }
 })
