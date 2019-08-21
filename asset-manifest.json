@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/jpham93-github/static/js/main.aa40c6ee.chunk.js",
-    "main.js.map": "/jpham93-github/static/js/main.aa40c6ee.chunk.js.map",
-    "runtime~main.js": "/jpham93-github/static/js/runtime~main.22ea4bd6.js",
-    "runtime~main.js.map": "/jpham93-github/static/js/runtime~main.22ea4bd6.js.map",
-    "static/css/2.f3d32a52.chunk.css": "/jpham93-github/static/css/2.f3d32a52.chunk.css",
-    "static/js/2.857dfb83.chunk.js": "/jpham93-github/static/js/2.857dfb83.chunk.js",
-    "static/js/2.857dfb83.chunk.js.map": "/jpham93-github/static/js/2.857dfb83.chunk.js.map",
-    "index.html": "/jpham93-github/index.html",
-    "precache-manifest.b702500e579465e3bacaa63829264666.js": "/jpham93-github/precache-manifest.b702500e579465e3bacaa63829264666.js",
-    "service-worker.js": "/jpham93-github/service-worker.js",
-    "static/css/2.f3d32a52.chunk.css.map": "/jpham93-github/static/css/2.f3d32a52.chunk.css.map",
-    "static/media/semantic.min.css": "/jpham93-github/static/media/outline-icons.ef60a4f6.woff"
+    "main.js": "/portfolio/static/js/main.d4ab97da.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.d4ab97da.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.747be05a.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.747be05a.js.map",
+    "static/css/2.bd571159.chunk.css": "/portfolio/static/css/2.bd571159.chunk.css",
+    "static/js/2.857dfb83.chunk.js": "/portfolio/static/js/2.857dfb83.chunk.js",
+    "static/js/2.857dfb83.chunk.js.map": "/portfolio/static/js/2.857dfb83.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.6750496e4afd38e60b28f129c550d207.js": "/portfolio/precache-manifest.6750496e4afd38e60b28f129c550d207.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.bd571159.chunk.css.map": "/portfolio/static/css/2.bd571159.chunk.css.map",
+    "static/media/semantic.min.css": "/portfolio/static/media/outline-icons.ef60a4f6.woff"
   }
 }
