@@ -10,6 +10,7 @@ const headerContainer = {
   minHeight: '30px',
   background: 'rgba(0, 0, 0, 0)',
   textAlign: 'center',
+  paddingTop: '1rem',
 }
 
 export default function () {

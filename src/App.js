@@ -4,11 +4,14 @@ import {
   Footer,
   Navbar,
   Header,
-} from './components'
+} from './components';
+import {
+  Resume,
+} from './pages';
 
 const mainStyle = {
   'height': '100vh',
-  'background': '#555',
+  'background': '#333945',
   'color': '#ffffff'
 };
 
@@ -17,6 +20,7 @@ function App() {
     <div style={mainStyle}>
       <Header />
       <Navbar />
+      <Resume />
       <Footer />
     </div>
   );

@@ -10,6 +10,7 @@ const footerStyle = {
   position: 'absolute',
   bottom: '0',
   textAlign: 'center',
+  padding: '10px',
 };
 
 export default function () {
