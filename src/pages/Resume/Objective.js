@@ -12,7 +12,7 @@ const objectiveContainer = {
   textAlign: 'center',
 };
 const paragraphStyle = {
-  maxWidth: '480px',
+  maxWidth: '640px',
   fontSize: '1.5rem',
   margin: 'auto'
 }
