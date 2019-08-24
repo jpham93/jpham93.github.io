@@ -7,8 +7,8 @@ const footerStyle = {
   width: '100vw',
   minHeight: '30px',
   background: '#555',
-  position: 'absolute',
-  bottom: '0',
+  // position: 'absolute',
+  // bottom: '0',
   textAlign: 'center',
   padding: '10px',
 };

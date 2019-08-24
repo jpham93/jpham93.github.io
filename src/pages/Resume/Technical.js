@@ -4,15 +4,29 @@ import {
   Header,
   Icon,
   Card,
+  Grid,
+  GridColumn,
 } from 'semantic-ui-react';
 
 const technicalContainer = {
   padding: '20px',
 }
+const cardStyle = {
+  minWidth: '80%',
+  margin: 'auto',
+  fontSize: '1.2rem',
+  lineHeight: '1.8rem',
+  textAlign: 'center'
+}
+
+const listStyle = {
+  listStyleType: 'none',
+  padding: '0',
+}
 
 export default function () {
   const personalStack = {
-    header: 'My Personal/Preferred Stack',
+    header: 'My Personal / Preferred Stack',
     skills: ['React.js', 'Redux', 'MongoDB', 'Node', 'Express', 'D3.js']
   };
 
@@ -30,19 +44,21 @@ export default function () {
   const cards = [personalStack, frontEnd, backEnd].map(card => {
     key++;
     return (
-      <Card raised key={key}>
-        <Card.Content>
-          <Card.Header>{card.header}</Card.Header>
-        </Card.Content>
-        <Card.Content>
-          <ul>
-            {card.skills.map(skill => {
-              key++;
-              return (<li style={{ color: 'black' }} key={key}>{skill}</li>)
-            })}
-          </ul>
-        </Card.Content>
-      </Card>
+      <Grid.Column>
+        <Card raised key={key} style={cardStyle}>
+          <Card.Content>
+            <Card.Header>{card.header}</Card.Header>
+          </Card.Content>
+          <Card.Content>
+            <ul style={listStyle}>
+              {card.skills.map(skill => {
+                key++;
+                return (<li style={{ color: 'black' }} key={key}>{skill}</li>)
+              })}
+            </ul>
+          </Card.Content>
+        </Card>
+      </Grid.Column>
     );
   });
 
@@ -52,9 +68,9 @@ export default function () {
         <Icon name='database' />
         <Header.Content>Technical Skills</Header.Content>
       </Header>
-      <Card.Group itemsPerRow={1}>
+      <Grid stackable columns={3}>
         {cards}
-      </Card.Group>
+      </Grid>
     </Container>
   );
 }

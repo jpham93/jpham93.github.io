@@ -8,9 +8,11 @@ import {
 import {
   Resume,
 } from './pages';
+import {
+  Sticky
+} from 'semantic-ui-react';
 
 const mainStyle = {
-  'height': '100vh',
   'background': '#333945',
   'color': '#ffffff'
 };
@@ -19,9 +21,11 @@ function App() {
   return (
     <div style={mainStyle}>
       <Header />
-      <Navbar />
+      <Sticky>
+        <Navbar />
+      </Sticky>
       <Resume />
-      <Footer />
+      <Footer attached='bottom' />
     </div>
   );
 }

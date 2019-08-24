@@ -7,8 +7,9 @@ import {
 const menuStyle = {
   display: 'flex',
   justifyContent: 'center',
-  background: 'rgba(0, 0, 0, 0)',
+  background: '#333945',
   color: 'white',
+  zIndex: '1',
 }
 
 export default function () {
