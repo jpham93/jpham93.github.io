@@ -13,10 +13,14 @@ const headerContainer = {
   paddingTop: '1rem',
 }
 
+const imgStyle = {
+  fontSize: '10px'
+}
+
 export default function () {
   return (
     <Container style={headerContainer}>
-      <Header as='h1' inverted>James Pham</Header>
+      <Header as='h1' inverted>James Pham <img src='' alt='Headshot of James Pham' style={imgStyle} /></Header>
       <Header as='h2' inverted>Web Developer</Header>
       <Header as='h4' inverted><Icon name='mail' /> Email: jamespham93@yahoo.com</Header>
     </Container>

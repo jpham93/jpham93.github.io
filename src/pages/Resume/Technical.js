@@ -5,7 +5,6 @@ import {
   Icon,
   Card,
   Grid,
-  GridColumn,
 } from 'semantic-ui-react';
 
 const technicalContainer = {
@@ -44,8 +43,8 @@ export default function () {
   const cards = [personalStack, frontEnd, backEnd].map(card => {
     key++;
     return (
-      <Grid.Column>
-        <Card raised key={key} style={cardStyle}>
+      <Grid.Column key={key}>
+        <Card raised style={cardStyle}>
           <Card.Content>
             <Card.Header>{card.header}</Card.Header>
           </Card.Content>
