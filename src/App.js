@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import {
   Footer,
@@ -9,7 +9,7 @@ import {
   Resume,
 } from './pages';
 import {
-  Sticky
+  Sticky,
 } from 'semantic-ui-react';
 
 const mainStyle = {
@@ -21,7 +21,7 @@ function App() {
   return (
     <div style={mainStyle}>
       <Header />
-      <Sticky>
+      <Sticky offset={0}>
         <Navbar />
       </Sticky>
       <Resume />
