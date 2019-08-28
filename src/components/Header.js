@@ -6,6 +6,11 @@ import {
 } from 'semantic-ui-react';
 import headshot from '../assets/images/headshot.png';
 
+/**
+ * Header Container Style
+ * 
+ * Styles the parent container of the Header component.
+ */
 const headerContainer = {
   width: '100vw',
   minHeight: '30px',
@@ -14,6 +19,13 @@ const headerContainer = {
   paddingTop: '1rem',
 }
 
+/**
+ * img Style
+ * 
+ * Sizes and shapes image in a circle.
+ * This actually styles a <div> container instead of 
+ * an <img> to maintain image ratio.
+ */
 const imgStyle = {
   height: '80px',
   width: '80px',
@@ -24,6 +36,12 @@ const imgStyle = {
   borderRadius: '50%'
 }
 
+/**
+ * Header functional component
+ * 
+ * Informational header of portfolio. 
+ * NOTE: Navbar is not apart of the header.
+ */
 export default function () {
   return (
     <Container style={headerContainer}>

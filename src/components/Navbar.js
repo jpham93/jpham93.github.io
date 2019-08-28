@@ -4,6 +4,12 @@ import {
   Icon
 } from 'semantic-ui-react';
 
+/**
+ * Menu Style
+ * 
+ * Style for Menu. Flex displays centers 
+ * the choices in center of the menu.
+ */
 const menuStyle = {
   display: 'flex',
   justifyContent: 'center',
@@ -12,6 +18,13 @@ const menuStyle = {
   zIndex: '1',
 }
 
+/**
+ * Navbar functional component
+ * 
+ * Navbar for user to navigate to each separate page.
+ * Uses hooks to maintain functional state for active
+ * button.
+ */
 export default function () {
   const [activeItem, setActive] = useState(null);
 

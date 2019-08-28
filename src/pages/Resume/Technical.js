@@ -7,9 +7,20 @@ import {
   Grid,
 } from 'semantic-ui-react';
 
+/**
+ * Technical Container
+ * 
+ * Styling for parent container
+ */
 const technicalContainer = {
   padding: '20px',
 }
+
+/**
+ * Card Styling
+ * 
+ * Uniform styling for each card
+ */
 const cardStyle = {
   minWidth: '80%',
   margin: 'auto',
@@ -18,11 +29,22 @@ const cardStyle = {
   textAlign: 'center'
 }
 
+/**
+ * List Style
+ * 
+ * Styling for each ul list inside Card
+ */
 const listStyle = {
   listStyleType: 'none',
   padding: '0',
 }
 
+/**
+ * Technical Functional Component
+ * 
+ * Section of Resume where only technical skills are displayed.
+ * Stacks are displayed based on areas of use.
+ */
 export default function () {
   const personalStack = {
     header: 'My Personal / Preferred Stack',
