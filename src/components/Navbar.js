@@ -3,6 +3,7 @@ import {
   Menu,
   Icon
 } from 'semantic-ui-react';
+import { Link, withRouter } from 'react-router-dom';
 
 /**
  * Menu Style
@@ -25,39 +26,47 @@ const menuStyle = {
  * Uses hooks to maintain functional state for active
  * button.
  */
-export default function () {
+export default withRouter(function () {
   const [activeItem, setActive] = useState(null);
 
   return (
     <Menu icon='labeled' style={menuStyle} inverted>
-      <Menu.Item
-        active={activeItem === 'home'}
-        onClick={() => setActive('home')}
-      >
-        <Icon name='address card outline' />
-        Resume
+      <Link to='/'>
+        <Menu.Item
+          active={activeItem === 'home'}
+          onClick={() => setActive('home')}
+        >
+          <Icon name='address card outline' />
+          Resume
       </Menu.Item>
-      <Menu.Item
-        active={activeItem === 'projects'}
-        onClick={() => setActive('projects')}
-      >
-        <Icon name='file code outline' />
-        Projects
+      </Link>
+      <Link to='/projects'>
+        <Menu.Item
+          active={activeItem === 'projects'}
+          onClick={() => setActive('projects')}
+        >
+          <Icon name='file code outline' />
+          Projects
       </Menu.Item>
-      <Menu.Item
-        active={activeItem === 'about'}
-        onClick={() => setActive('about')}
-      >
-        <Icon name='user circle' />
-        About Me
+      </Link>
+      <Link to='/about'>
+        <Menu.Item
+          active={activeItem === 'about'}
+          onClick={() => setActive('about')}
+        >
+          <Icon name='user circle' />
+          About Me
       </Menu.Item>
-      <Menu.Item
-        active={activeItem === 'contact'}
-        onClick={() => setActive('contact')}
-      >
-        <Icon name='mail outline' />
-        Contact
+      </Link>
+      <Link to='/contact'>
+        <Menu.Item
+          active={activeItem === 'contact'}
+          onClick={() => setActive('contact')}
+        >
+          <Icon name='mail outline' />
+          Contact
       </Menu.Item>
+      </Link>
     </Menu>
   );
-}
+});
