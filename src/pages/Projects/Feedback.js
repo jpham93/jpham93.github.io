@@ -3,10 +3,14 @@ import {
   Container,
   Header,
   Grid,
-  Button,
-  Icon,
 } from 'semantic-ui-react';
 
+/**
+ * Feedback funcitonal component
+ * 
+ * Sectional component that goes over my involment in
+ * VTA's Feedback App development.
+ */
 export default function () {
   return (
     <Container fluid>
@@ -28,7 +32,7 @@ export default function () {
             first professional workflow with Github where I properly branched
             new features, made Pull Requests, and went through code reviews. We
             have finished the skeleton phase and are now developing
-            functionality and backend logic using a symfony server with and
+            functionality and backend logic using a symfony server with
             NoSQL database (Elasticsearch).</p>
           </Grid.Column>
           <Grid.Column width={4}>
@@ -41,6 +45,7 @@ export default function () {
               <li>Symfony</li>
               <li>Elastic</li>
               <li>AWS</li>
+              <li>Github</li>
             </ul>
             <Header inverted as='h5'>Links:</Header>
             <p>Sorry! Repository is currently private. Will discuss and demo upon request.</p>

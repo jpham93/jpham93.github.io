@@ -5,7 +5,7 @@ import {
 import Introduction from './Introduction';
 import Portfolio from './Portfolio';
 import Feedback from './Feedback';
-
+import YelpCamp from './YelpCamp';
 /**
  * Projects Page component
  * 
@@ -18,6 +18,7 @@ export default function () {
       <Introduction />
       <Portfolio />
       <Feedback />
+      <YelpCamp />
     </Container>
-  )
+  );
 }
