@@ -7,6 +7,12 @@ import {
   Icon,
 } from 'semantic-ui-react';
 
+/**
+ * Portfoliio functional component
+ * 
+ * This section covers summary, description, and source code
+ * link to this website. 
+ */
 export default function () {
   return (
     <Container fluid>
@@ -34,6 +40,7 @@ export default function () {
               <li>Semantic UI</li>
               <li>AWS EC2 Instance</li>
             </ul>
+            <Header inverted as='h5'>Links:</Header>
             <Button icon>
               <Icon name='github' />
             </Button>
