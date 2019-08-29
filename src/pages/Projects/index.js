@@ -6,6 +6,8 @@ import Introduction from './Introduction';
 import Portfolio from './Portfolio';
 import Feedback from './Feedback';
 import YelpCamp from './YelpCamp';
+import MHNLanding from './MHNLanding';
+
 /**
  * Projects Page component
  * 
@@ -19,6 +21,7 @@ export default function () {
       <Portfolio />
       <Feedback />
       <YelpCamp />
+      <MHNLanding />
     </Container>
   );
 }

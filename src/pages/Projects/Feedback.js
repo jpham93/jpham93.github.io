@@ -3,10 +3,11 @@ import {
   Container,
   Header,
   Grid,
+  Icon,
 } from 'semantic-ui-react';
 
 /**
- * Feedback funcitonal component
+ * Feedback functional component
  * 
  * Sectional component that goes over my involment in
  * VTA's Feedback App development.
@@ -48,7 +49,7 @@ export default function () {
               <li>Github</li>
             </ul>
             <Header inverted as='h5'>Links:</Header>
-            <p>Sorry! Repository is currently private. Will discuss and demo upon request.</p>
+            <p><Icon name='exclamation triangle' />Sorry! Repository is currently private. Will discuss and demo upon request.</p>
           </Grid.Column>
         </Grid.Row>
       </Grid>
