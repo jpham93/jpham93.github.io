@@ -6,6 +6,12 @@ import {
   Button
 } from 'semantic-ui-react';
 
+/**
+ * MHNLanding functional component
+ * 
+ * This component presents the first project created with Wordpress
+ * and released into production with Amazon Lightsail platform.
+ */
 export default function () {
   return (
     <Container fluid>

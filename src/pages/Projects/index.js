@@ -7,6 +7,7 @@ import Portfolio from './Portfolio';
 import Feedback from './Feedback';
 import YelpCamp from './YelpCamp';
 import MHNLanding from './MHNLanding';
+import Pomodoro from './Pomodoro';
 
 /**
  * Projects Page component
@@ -22,6 +23,7 @@ export default function () {
       <Feedback />
       <YelpCamp />
       <MHNLanding />
+      <Pomodoro />
     </Container>
   );
 }
