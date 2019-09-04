@@ -44,7 +44,7 @@ const imgStyle = {
  */
 export default function () {
   return (
-    <Container style={headerContainer}>
+    <Container style={headerContainer} id='header'>
       <Header as='h1' inverted>James Pham</Header>
       <div style={imgStyle}></div>
       <Header as='h2' inverted>Web Developer</Header>

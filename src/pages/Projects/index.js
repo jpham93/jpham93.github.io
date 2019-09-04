@@ -10,6 +10,10 @@ import MHNLanding from './MHNLanding';
 import Pomodoro from './Pomodoro';
 import FCC from './FCC'
 
+const projectsContainer = {
+  margin: '2rem 0',
+};
+
 /**
  * Projects Page component
  * 
@@ -18,7 +22,7 @@ import FCC from './FCC'
  */
 export default function () {
   return (
-    <Container>
+    <Container style={projectsContainer}>
       <Introduction />
       <Portfolio />
       <Feedback />

@@ -30,7 +30,7 @@ export default withRouter(function () {
   const [activeItem, setActive] = useState(null);
 
   return (
-    <Menu icon='labeled' style={menuStyle} inverted>
+    <Menu icon='labeled' style={menuStyle} id='navbar' inverted>
       <Link to='/'>
         <Menu.Item
           active={activeItem === 'home'}
