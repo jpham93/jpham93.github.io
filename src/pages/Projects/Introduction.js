@@ -7,7 +7,7 @@ import {
 export default function () {
   return (
     <Container>
-      <Header inverted as='h2'>Projects</Header>
+      <Header inverted as='h1' textAlign='center'>Projects</Header>
       <p>In my short time as a web developer, I've made various applications.
       Whether it was a dynamic full stack website, a mobile app, or a static,
       one page application, I have demonstrated each skill set listed in the
