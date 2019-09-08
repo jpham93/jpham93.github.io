@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import {
   Menu,
-  Icon
+  Container,
+  MenuItem,
 } from 'semantic-ui-react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import logo from '../assets/logo/android-chrome-512x512.png';
 
 /**
  * Menu Style
@@ -13,10 +15,21 @@ import { Link, withRouter } from 'react-router-dom';
  */
 const menuStyle = {
   display: 'flex',
-  justifyContent: 'center',
+  justifyContent: 'space-between',
+  alignItem: 'center',
   background: '#333945',
   color: 'white',
   zIndex: '1',
+};
+
+const logoStyle = {
+  height: '50px',
+  width: 'auto',
+};
+
+const menuItemContainer = {
+  justifyContent: 'flex-end',
+  alignItems: 'center',
 }
 
 /**
@@ -26,47 +39,58 @@ const menuStyle = {
  * Uses hooks to maintain functional state for active
  * button.
  */
-export default withRouter(function () {
-  const [activeItem, setActive] = useState(null);
+export default withRouter(function (props) {
+  const [activeItem, setActive] = useState(props.location.pathname);
+
+  /**
+   * selectPage helper function - changes route based on menu click
+   * @param {*} page 
+   */
+  const selectPage = (page) => props.history.push(page);
 
   return (
-    <Menu icon='labeled' style={menuStyle} id='navbar' inverted>
-      <Link to='/'>
+    <Menu icon='labeled' style={menuStyle} id='navbar' inverted pointing borderless fluid>
+      <Menu.Header>
+        <img alt='JP' src={logo} style={logoStyle} />
+      </Menu.Header>
+      <Container style={menuItemContainer}>
         <Menu.Item
-          active={activeItem === 'home'}
-          onClick={() => setActive('home')}
+          active={activeItem === '/'}
+          onClick={() => {
+            setActive('/');
+            selectPage('/');
+          }}
         >
-          <Icon name='address card outline' />
           Resume
       </Menu.Item>
-      </Link>
-      <Link to='/projects'>
         <Menu.Item
-          active={activeItem === 'projects'}
-          onClick={() => setActive('projects')}
+          active={activeItem === '/projects'}
+          onClick={() => {
+            setActive('/projects');
+            selectPage('/projects');
+          }}
         >
-          <Icon name='file code outline' />
           Projects
       </Menu.Item>
-      </Link>
-      <Link to='/about'>
         <Menu.Item
-          active={activeItem === 'about'}
-          onClick={() => setActive('about')}
+          active={activeItem === '/about'}
+          onClick={() => {
+            setActive('/about');
+            selectPage('/about');
+          }}
         >
-          <Icon name='user circle' />
           About Me
       </Menu.Item>
-      </Link>
-      <Link to='/contact'>
         <Menu.Item
-          active={activeItem === 'contact'}
-          onClick={() => setActive('contact')}
+          active={activeItem === '/contact'}
+          onClick={() => {
+            setActive('/contact');
+            selectPage('/contact');
+          }}
         >
-          <Icon name='mail outline' />
           Contact
       </Menu.Item>
-      </Link>
-    </Menu>
+      </Container>
+    </Menu >
   );
 });

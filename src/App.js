@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {
   Footer,
   Navbar,
-  Header,
 } from './components';
 import {
   Resume,
@@ -26,7 +25,6 @@ function App() {
 
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div style={mainStyle}>
-        <Header />
         <Sticky offset={0}>
           <Navbar />
         </Sticky>
