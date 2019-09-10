@@ -1,0 +1,12 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/* Color Theme */
+@lightShade: #EDE3E4;
+@lightAccent: #5EA2B9;
+@mainBrand: #495681;
+@darkAccent: #1364A0;
+@darkShade: #121B2F;
+
+@pageBackground: @lightShade;
