@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Menu,
   Container,
-  MenuItem,
 } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import logo from '../assets/logo/android-chrome-512x512.png';

@@ -1,5 +1,6 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
+import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import {
   Footer,
@@ -16,8 +17,7 @@ import {
 } from 'semantic-ui-react';
 
 const mainStyle = {
-  'background': '#333945',
-  'color': '#ffffff'
+  'background': 'var(--lightShade)',
 };
 
 function App() {
