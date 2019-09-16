@@ -85,7 +85,7 @@ export default function () {
 
   return (
     <Container fluid style={technicalContainer}>
-      <Header as='h2' textAlign='center' inverted>
+      <Header as='h2' textAlign='center'>
         <Icon name='database' />
         <Header.Content>Technical Skills</Header.Content>
       </Header>

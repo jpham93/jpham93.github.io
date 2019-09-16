@@ -16,7 +16,7 @@ const menuStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItem: 'center',
-  background: '#333945',
+  background: 'var(--darkShade)',
   color: 'white',
   zIndex: '1',
 };
@@ -52,7 +52,7 @@ export default withRouter(function (props) {
       <Menu.Header>
         <img alt='JP' src={logo} style={logoStyle} />
       </Menu.Header>
-      <Container style={menuItemContainer}>
+      <Container style={menuItemContainer} fluid0>
         <Menu.Item
           active={activeItem === '/'}
           onClick={() => {
@@ -61,7 +61,7 @@ export default withRouter(function (props) {
           }}
         >
           Resume
-      </Menu.Item>
+        </Menu.Item>
         <Menu.Item
           active={activeItem === '/projects'}
           onClick={() => {
@@ -70,7 +70,7 @@ export default withRouter(function (props) {
           }}
         >
           Projects
-      </Menu.Item>
+        </Menu.Item>
         <Menu.Item
           active={activeItem === '/about'}
           onClick={() => {
@@ -79,7 +79,7 @@ export default withRouter(function (props) {
           }}
         >
           About Me
-      </Menu.Item>
+        </Menu.Item>
         <Menu.Item
           active={activeItem === '/contact'}
           onClick={() => {
@@ -88,7 +88,7 @@ export default withRouter(function (props) {
           }}
         >
           Contact
-      </Menu.Item>
+        </Menu.Item>
       </Container>
     </Menu >
   );

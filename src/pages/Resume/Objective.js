@@ -11,8 +11,6 @@ import {
  * Styling for parent container of component
  */
 const objectiveContainer = {
-  background: 'var(--darkShade)',
-  color: 'var(--lightShade)',
   padding: '20px 0',
   textAlign: 'center',
 };
