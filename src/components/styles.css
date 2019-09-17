@@ -1,0 +1,9 @@
+/** Components Styling **/
+
+/* Navbar animation class */
+.navbar-animation {
+  box-shadow: var(--mediumShadow) !important;
+  background: var(--mainGradient) !important;
+  color: var(--lightShade) !important;
+  transition: box-shadow 1s ease, background 0.2s linear, color 1s ease;
+}

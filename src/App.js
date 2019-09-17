@@ -1,7 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {
   Footer,
   Navbar,
@@ -12,9 +12,6 @@ import {
   About,
   Contact
 } from './pages';
-import {
-  Sticky,
-} from 'semantic-ui-react';
 
 const mainStyle = {
   'background': 'var(--lightShade)',
@@ -22,19 +19,16 @@ const mainStyle = {
 
 function App() {
   return (
-
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div style={mainStyle}>
-        <Sticky offset={0}>
-          <Navbar />
-        </Sticky>
+        <Navbar/>
         <Switch>
-          <Route path='/projects' component={Projects} />
-          <Route path='/about' component={About} />
-          <Route path='/contact' component={Contact} />
-          <Route exact path='/' component={Resume} />
+          <Route path='/projects' component={Projects}/>
+          <Route path='/about' component={About}/>
+          <Route path='/contact' component={Contact}/>
+          <Route exact path='/' component={Resume}/>
         </Switch>
-        <Footer attached='bottom' />
+        <Footer attached='bottom'/>
       </div>
     </BrowserRouter>
   );

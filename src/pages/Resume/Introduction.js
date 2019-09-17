@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Container,
   Header,
-  Icon,
   Grid
 } from 'semantic-ui-react';
 import headshot from '../../assets/images/headshot.png';
@@ -13,11 +12,11 @@ import headshot from '../../assets/images/headshot.png';
  * Styles the parent container of the Header component.
  */
 const introContainer = {
-  minHeight: '30px',
-  textAlign: 'center',
-  paddingTop: '1rem',
+  display: 'flex',
+  paddingTop: '3rem',
   minHeight: '170px',
-}
+  justifyContent: 'center'
+};
 
 /**
  * img Style
@@ -33,18 +32,19 @@ const imgStyle = {
   backgroundSize: 'cover',
   margin: 'auto',
   borderRadius: '50%',
-  float: 'right',
-}
+  marginLeft: '2em !important'
+};
 
 const introTextStyle = {
   fontSize: '4em !important',
   paddingLeft: '40px',
-  clear: 'right',
-}
+  maxWidth: '400px !important',
+  marginRight: '2em !important'
+};
 
 const nameStyle = {
   fontSize: '2rem'
-}
+};
 
 export default function () {
   return (
@@ -54,7 +54,7 @@ export default function () {
         <Header as='h2'>My Name is <span style={nameStyle}>James Pham</span></Header>
         <Header as='h3'>I am a Junior Full Stack Web Developer.</Header>
       </Container>
-      <div style={imgStyle}></div>
+      <div style={imgStyle} />
     </Container>
   );
 }
