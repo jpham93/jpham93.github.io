@@ -1,0 +1,11 @@
+/**
+ * intro text container
+ *
+ * Styling for text container only.
+ */
+#intro-text-container {
+  font-size: 5em;
+  padding: 40px;
+  max-width: 630px !important;
+  flex-grow: 0;
+}

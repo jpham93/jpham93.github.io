@@ -2,9 +2,10 @@ import React from 'react';
 import {
   Container,
   Header,
-  Grid
+  Divider,
 } from 'semantic-ui-react';
 import headshot from '../../assets/images/headshot.png';
+import './styles.css';
 
 /**
  * Header Container Style
@@ -13,45 +14,36 @@ import headshot from '../../assets/images/headshot.png';
  */
 const introContainer = {
   display: 'flex',
-  paddingTop: '3rem',
+  padding: '5rem',
   minHeight: '170px',
   justifyContent: 'center'
 };
 
 /**
- * img Style
- * 
+ * imgStyle
+ *
  * Sizes and shapes image in a circle.
- * This actually styles a <div> container instead of 
+ * This actually styles a <div> container instead of
  * an <img> to maintain image ratio.
  */
 const imgStyle = {
-  height: '160px',
-  width: '160px',
+  height: '200px',
+  width: '200px',
   backgroundImage: `url(${headshot})`,
   backgroundSize: 'cover',
   margin: 'auto',
   borderRadius: '50%',
-  marginLeft: '2em !important'
-};
-
-const introTextStyle = {
-  fontSize: '4em !important',
-  paddingLeft: '40px',
-  maxWidth: '400px !important',
-  marginRight: '2em !important'
-};
-
-const nameStyle = {
-  fontSize: '2rem'
+  marginLeft: '2em !important',
+  flexShrink: '0',
 };
 
 export default function () {
   return (
     <Container style={introContainer}>
-      <Container style={introTextStyle}>
-        <Header as='h1'>Hi!</Header>
-        <Header as='h2'>My Name is <span style={nameStyle}>James Pham</span></Header>
+      <Container id='intro-text-container' >
+        <Header as='h1' style={{fontSize:'2.5rem', lineHeight:'50%'}}>Hi!</Header>
+        <Header as='h2' style={{fontSize:'3rem'}}>My Name is <span style={{fontSize:'4rem'}}>James Pham</span></Header>
+        <Divider/>
         <Header as='h3'>I am a Junior Full Stack Web Developer.</Header>
       </Container>
       <div style={imgStyle} />
