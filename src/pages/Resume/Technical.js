@@ -6,6 +6,7 @@ import {
   Card,
   Grid,
 } from 'semantic-ui-react';
+import './styles.css';
 
 /**
  * Technical Container
@@ -14,20 +15,16 @@ import {
  */
 const technicalContainer = {
   padding: '20px',
-}
+};
 
 /**
- * Card Styling
- * 
- * Uniform styling for each card
+ * Column Style
+ *
+ * Centering for each Grid Column
  */
-const cardStyle = {
-  minWidth: '80%',
+const columnStyle = {
   margin: 'auto',
-  fontSize: '1.2rem',
-  lineHeight: '1.8rem',
-  textAlign: 'center'
-}
+};
 
 /**
  * List Style
@@ -37,7 +34,18 @@ const cardStyle = {
 const listStyle = {
   listStyleType: 'none',
   padding: '0',
-}
+  height: '100%',
+  width: '100%',
+};
+
+/**
+ * Card header style
+ *
+ * styling of each card header
+ */
+const cardHeaderStyle = {
+  color: 'var(--mainBrain)'
+};
 
 /**
  * Technical Functional Component
@@ -61,20 +69,17 @@ export default function () {
     skills: ['PHP 7', 'MySQL', 'Symfony 4', 'Elasticsearch']
   };
 
-  let key = 0;
   const cards = [personalStack, frontEnd, backEnd].map(card => {
-    key++;
     return (
-      <Grid.Column key={key}>
-        <Card raised style={cardStyle}>
+      <Grid.Column key={card.header} style={columnStyle}>
+        <Card raised className='card-style'>
           <Card.Content>
-            <Card.Header>{card.header}</Card.Header>
+            <Card.Header style={cardHeaderStyle}>{card.header}</Card.Header>
           </Card.Content>
           <Card.Content>
             <ul style={listStyle}>
               {card.skills.map(skill => {
-                key++;
-                return (<li style={{ color: 'black' }} key={key}>{skill}</li>)
+                return (<li className='card-list' key={skill}>{skill}</li>)
               })}
             </ul>
           </Card.Content>

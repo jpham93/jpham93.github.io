@@ -13,6 +13,7 @@ import {
 const objectiveContainer = {
   padding: '20px 0',
   textAlign: 'center',
+  margin: '0 auto 5em auto'
 };
 
 /**
@@ -24,7 +25,7 @@ const paragraphStyle = {
   maxWidth: '640px',
   fontSize: '1.5rem',
   margin: 'auto'
-}
+};
 
 /**
  * Objective functional Component
