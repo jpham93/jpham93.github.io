@@ -14,24 +14,7 @@ import TutorExperience from './TutorExperience'
  */
 const experienceContainer = {
   padding: '20px',
-};
-
-
-/**
- * Grid Row Style
- *
- * adds margin to each specific Grid Row
- */
-const rowStyle = {};
-
-/**
- * Summary Column
- *
- * column that list the title of the experience + summary
- */
-const summaryColumnStyle = {
-  fontSize: '1.5em',
-  textAlign: 'center',
+  marginBottom: '4em',
 };
 
 /**
@@ -47,8 +30,8 @@ export default function () {
         <Icon name='briefcase'/>
         <Header.Content>Experience</Header.Content>
       </Header>
-      <VtaExperience/>
-      <TutorExperience/>
+      <VtaExperience />
+      <TutorExperience />
       <HackathonExperience />
     </Container>
   );

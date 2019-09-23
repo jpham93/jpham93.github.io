@@ -5,14 +5,16 @@ import {
   Icon,
   Container,
   Header,
-  Responsive
+  Responsive,
+  Transition
 } from "semantic-ui-react";
 import vta_logo from "../../../assets/images/vta_logo_2017.svg";
 import devops_handbook from "../../../assets/images/devops_handbook.png";
 
 const containerStyle = {
   display: 'flex',
-  justifyContent: 'flex-start'
+  justifyContent: 'flex-start',
+  marginBottom: '1em',
 };
 
 const divStyle = {
@@ -26,6 +28,9 @@ const cardStyle = {
   color: 'var(--lightShade)',
   padding: '10px',
   paddingBottom: '20px',
+  border: 'none',
+  borderRadius: '10px',
+  boxShadow: 'none',
 };
 
 /**
@@ -42,6 +47,22 @@ const logoStyle = {
 };
 
 /**
+ * Header logo Style
+ *
+ * logo for card header Only available in
+ */
+const headerLogoStyle = {
+  height: '40px',
+  width: 'auto',
+  padding: '5px',
+  background: 'var(--lightShade)',
+  borderRadius: '5px',
+  boxShadow: '0 0 1px 2px',
+  marginLeft: '10px',
+  marginBottom: '5px'
+};
+
+/**
  * img style (DevOps Handbook)
  *
  * centers and sizes the image of the DevOps hand books
@@ -53,18 +74,6 @@ const imgStyle = {
   display: 'block',
 };
 
-/**
- * Accordion.Title style
- *
- * styles "Read More" and places it at the bottom
- * of the card.
- */
-const accordionTitleStyle = {
-  color: 'var(--lightAccent)',
-  position: 'absolute',
-  bottom: '0',
-};
-
 export default function () {
   const [isOpen, setOpen] = useState(false);
 
@@ -73,22 +82,30 @@ export default function () {
       <div style={divStyle}>
         <Card style={cardStyle}>
           <Card.Content>
-            <Header as='h2' style={{color: 'var(--lightShade)'}}>VTA Internship <img src={vta_logo}/></Header>
+            <Header as='h2' style={{color: 'var(--lightShade)'}}>
+              VTA Internship
+              <Responsive {...Responsive.onlyTablet} style={{display: 'inline'}}>
+                <img src={vta_logo} style={headerLogoStyle}/>
+              </Responsive>
+            </Header>
             <p style={{fontSize: '1.2em'}}>As web developer intern at VTA, I work closely with a Senior
               Full Stack Engineer and a Senior DevOps Engineer. My daily work
               involves coding new features, providing reviews for pull requests, and
               many other industry standard practices.</p>
           </Card.Content>
-          <Accordion>
-            <Accordion.Title
-              active={isOpen}
-              onClick={() => setOpen(!isOpen)}
-              style={accordionTitleStyle}
-            >
-              <Icon name='dropdown'/> {isOpen ? 'Close' : 'Read More'}
-            </Accordion.Title>
-            <Accordion.Content active={isOpen}>
-              <Header as='h3' style={{color: 'var(--lightShade)'}}>Feedback Application</Header>
+          <p onClick={() => setOpen(!isOpen)} style={{color:'var(--lightAccent)'}}>
+            {
+              !isOpen ?
+                <> <Icon name='chevron down'/> Details </> :
+                <> <Icon name='chevron up'/> Close </>
+            }
+          </p>
+        </Card>
+        <Transition.Group animation={'slide down'} duration={500}>
+          {
+            isOpen &&
+            <div>
+              <Header as='h3' style={{color: 'var(--darkAccent)'}}>Feedback Application</Header>
               <p>VTA is developing a progressive web application to enable customers
                 tunnel direct feedback to the customer service department. Because
                 this application is built internally, I had the pleasure of
@@ -110,7 +127,7 @@ export default function () {
                   transform JSON formatted data to Elastic search documentation.
                 </li>
               </ul>
-              <Header as='h3' style={{color: 'var(--lightShade)'}}>Participating in Workshops</Header>
+              <Header as='h3' style={{color: 'var(--darkAccent)'}}>Participating in Workshops</Header>
               <p>VTA sponsors many activies that values ongoing education to
                 strengthen, retool, and keep lifelong learners current with the
                 latest development technology. I got to experience both internal and
@@ -123,14 +140,14 @@ export default function () {
                   landing page for my mom's business.
                 </li>
               </ul>
-              <Header as='h3' style={{color: 'var(--lightShade)'}}>Books</Header>
+              <Header as='h3' style={{color: 'var(--darkAccent)'}}>Books</Header>
               <p>As a supplement to my internship, I also read <em>The DevOps Handbook: How to Create World-Class
                 Agility,
                 Reliability, & Security in Technology Organization</em></p>
               <img style={imgStyle} src={devops_handbook} alt='The DevOps Handbook Cover'/>
-            </Accordion.Content>
-          </Accordion>
-        </Card>
+            </div>
+          }
+        </Transition.Group>
       </div>
       <Responsive {...Responsive.onlyComputer}>
         <img src={vta_logo} style={logoStyle}/>
