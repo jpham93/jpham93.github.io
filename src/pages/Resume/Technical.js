@@ -44,7 +44,24 @@ const listStyle = {
  * styling of each card header
  */
 const cardHeaderStyle = {
-  color: 'var(--mainBrain)'
+  color: 'inherit',
+};
+/**
+ * Card Header Content Style
+ *
+ * parent container for header
+ */
+const cardHeaderContentStyle = {
+  paddingBottom: '0'
+};
+/**
+ * card content style
+ *
+ * removes spacing from card content body
+ */
+const cardContentStyle = {
+  padding: '0',
+  borderTop: 'none'
 };
 
 /**
@@ -73,10 +90,10 @@ export default function () {
     return (
       <Grid.Column key={card.header} style={columnStyle}>
         <Card raised className='card-style'>
-          <Card.Content>
+          <Card.Content style={cardHeaderContentStyle}>
             <Card.Header style={cardHeaderStyle}>{card.header}</Card.Header>
           </Card.Content>
-          <Card.Content>
+          <Card.Content style={cardContentStyle}>
             <ul style={listStyle}>
               {card.skills.map(skill => {
                 return (<li className='card-list' key={skill}>{skill}</li>)

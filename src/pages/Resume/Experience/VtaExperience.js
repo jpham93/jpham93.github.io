@@ -93,13 +93,13 @@ export default function () {
               involves coding new features, providing reviews for pull requests, and
               many other industry standard practices.</p>
           </Card.Content>
-          <p onClick={() => setOpen(!isOpen)} style={{color:'var(--lightAccent)'}}>
+          <a onClick={() => setOpen(!isOpen)} style={{color:'var(--lightAccent)'}}>
             {
               !isOpen ?
                 <> <Icon name='chevron down'/> Details </> :
                 <> <Icon name='chevron up'/> Close </>
             }
-          </p>
+          </a>
         </Card>
         <Transition.Group animation={'slide down'} duration={500}>
           {

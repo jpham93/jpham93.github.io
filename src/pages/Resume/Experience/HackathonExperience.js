@@ -69,7 +69,7 @@ export default function () {
               execute in a competition driven but supportive environment.</p>
           </Card.Content>
           <Accordion>
-            <p
+            <a
               onClick={() => setOpen(!isOpen)}
               style={{color: 'var(--lightAccent)'}}
             >
@@ -78,7 +78,7 @@ export default function () {
                   <> <Icon name='chevron down'/> Details </> :
                   <> <Icon name='chevron up'/> Close </>
               }
-            </p>
+            </a>
           </Accordion>
         </Card>
         <Transition.Group animation={'slide down'} duration={500}>
