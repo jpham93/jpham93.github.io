@@ -1,5 +1,5 @@
 :root {
-  /*** Color Theme ***/ 
+  /*** Color Theme ***/
   --lightShade: #f6f4f6;
   --lightAccent: #5EA2B9;
   --mainBrand: #495681;
@@ -7,18 +7,19 @@
   --darkShade: #121B2F;
 
   /*** Gradient ***/
-  --lightGradient: linear-gradient(94deg, rgba(78,132,150,1) 0%, rgba(94,162,185,1) 35%, rgba(128,178,195,1) 100%);
-  --mainGradient: linear-gradient(45deg, rgba(73,86,129,1) 0%, rgba(89,100,136,1) 67%, rgba(114,118,133,1) 100%);
-  --darkGradient: linear-gradient(86deg, rgba(7,66,110,1) 0%, rgba(19,100,160,1) 50%, rgba(62,137,191,1) 100%);
+  --lightGradient: linear-gradient(94deg, rgba(78, 132, 150, 1) 0%, rgba(94, 162, 185, 1) 35%, rgba(128, 178, 195, 1) 100%);
+  --mainGradient: linear-gradient(45deg, rgba(73, 86, 129, 1) 0%, rgba(89, 100, 136, 1) 67%, rgba(114, 118, 133, 1) 100%);
+  --darkGradient: linear-gradient(86deg, rgba(7, 66, 110, 1) 0%, rgba(19, 100, 160, 1) 50%, rgba(62, 137, 191, 1) 100%);
 
   /*** Box Shadows (Credit: ) ***/
-  --lightestShadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  
-  --lightShadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  --mediumShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  --darkShadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  --darkestShadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  --lightestShadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --lightShadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --mediumShadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --darkShadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  --darkestShadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  --blurShadow: 0 10px 30px rgba(89, 100, 136, .4);
 
   /* shadow hover effect (works best with lightest shadow) */
-  --shadowTransition: all 0.3s cubic-bezier(.25,.8,.25,1); /* transition */
-  --shadowHover: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); /* box-shadow */
+  --shadowTransition: all 0.3s cubic-bezier(.25, .8, .25, 1); /* transition */
+  --shadowHover: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* box-shadow */
 }

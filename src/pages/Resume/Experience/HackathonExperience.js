@@ -3,7 +3,7 @@ import {
   Card,
   Accordion,
   Icon,
-  Container, Header, Grid,
+  Container, Header,
   Responsive, Transition,
 } from "semantic-ui-react";
 
@@ -18,11 +18,12 @@ const divStyle = {
   width: '100%',
 };
 
-const cardStyle = {
+let cardStyle = {
   width: '100%',
   background: 'var(--mainBrand)',
   color: 'var(--lightShade)',
   padding: '10px',
+  paddingBottom: '20px',
   border: 'none',
   borderRadius: '10px',
   boxShadow: 'none',
@@ -68,18 +69,14 @@ export default function () {
               joy in the pressured filled environment to plan, innovate, and
               execute in a competition driven but supportive environment.</p>
           </Card.Content>
-          <Accordion>
-            <a
-              onClick={() => setOpen(!isOpen)}
-              style={{color: 'var(--lightAccent)'}}
-            >
-              {
-                !isOpen ?
-                  <> <Icon name='chevron down'/> Details </> :
-                  <> <Icon name='chevron up'/> Close </>
-              }
-            </a>
-          </Accordion>
+          <a onClick={() => setOpen(!isOpen)} style={{color: 'var(--lightAccent)'}}
+          >
+            {
+              !isOpen ?
+                <> <Icon name='chevron down'/> Details </> :
+                <> <Icon name='chevron up'/> Close </>
+            }
+          </a>
         </Card>
         <Transition.Group animation={'slide down'} duration={500}>
           {

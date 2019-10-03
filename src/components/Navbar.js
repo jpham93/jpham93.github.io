@@ -26,11 +26,6 @@ const menuStyle = {
   transition: 'background 1s ease, box-shadow 0.3s linear'
 };
 
-const logoStyle = {
-  height: '50px',
-  width: 'auto',
-};
-
 const menuItemContainer = {
   justifyContent: 'flex-end',
   alignItems: 'center',
@@ -70,7 +65,7 @@ export default withRouter(function (props) {
   return (
     <Menu icon='labeled' style={menuStyle} id='navbar' className={scrollTop > 0 ? 'navbar-animation' : ''}
           pointing secondary borderless fluid inverted={scrollTop > 0}>
-      <Container style={menuItemContainer} fluid>
+      <Container style={menuItemContainer}>
         <Menu.Item
           active={activeItem === '/'}
           onClick={() => {
