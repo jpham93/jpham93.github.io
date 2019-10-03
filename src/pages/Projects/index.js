@@ -11,7 +11,8 @@ import Pomodoro from './Pomodoro';
 import FCC from './FCC'
 
 const projectsContainer = {
-  margin: '2rem 0',
+  paddingTop: '5rem',
+  minHeight: 'calc(100vh - 58px)',
 };
 
 /**

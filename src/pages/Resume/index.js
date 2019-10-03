@@ -6,11 +6,10 @@ import Objective from './Objective';
 import Technical from './Technical';
 import Experience from './Experience';
 import Introduction from './Introduction';
-import HackathonExperience from './Experience/HackathonExperience';
 
 export default function () {
   return (
-    <Container fluid>
+    <Container fluid className={'container-style'}>
       <Introduction />
       <Objective />
       <Technical />

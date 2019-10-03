@@ -9,7 +9,7 @@ import {
  * Styling for footer.
  */
 const footerStyle = {
-  width: '100vw',
+  width: '100%',
   minHeight: '30px',
   background: 'var(--mainGradient)',
   textAlign: 'center',

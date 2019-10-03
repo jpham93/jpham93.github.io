@@ -1,4 +1,13 @@
 /**
+ * main container style (index.js)
+ *
+ * Remove margin from container
+ */
+.container-style {
+  margin: 0 !important;
+}
+
+/**
  * intro text container (Introduction.js)
  *
  * Styling for text container only.
@@ -8,6 +17,76 @@
   padding: 40px;
   max-width: 630px !important;
   flex-grow: 0;
+  margin-right: 0 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #intro-text-container {
+    margin: auto !important;
+    width: 100% !important;
+  }
+}
+
+/**
+ *  Button Wrapper
+ *
+ *  creates a border gradient for the button and responsible for box shadow effect
+ */
+.button-wrapper {
+  display: inline-flex;
+  background: var(--lightGradient);
+  border-radius: 4px;
+  margin: 5px;
+  padding: 2px;
+  box-shadow: none;
+  transition: box-shadow 1s linear;
+}
+
+.button-wrapper:hover {
+  box-shadow: var(--blurShadow);
+}
+
+/**
+ *  Button styling (Introduction.js). Applies to both buttons here
+ *
+ *  styling for intro section buttons. This styling is borrowed from
+ *  Steven Shaw – https://css-tricks.com/gradient-borders-in-css/
+ */
+.button-style {
+  /*transition: background 0.5s ease;*/
+  padding: 2px;
+  margin: 0 !important;
+}
+
+/**
+ *  Resume button styling
+ *
+ *  Opposite of Linkedin button color and background
+ */
+#resume-btn {
+  background: var(--lightShade) !important;
+  color: var(--darkAccent) !important;
+  transition: 0.7s background linear, 0.7s color linear !important;
+}
+
+#resume-btn:hover {
+  background: var(--lightGradient) !important;
+  color: var(--lightShade) !important;
+}
+
+/**
+ *  Linkedin button styling
+ *
+ *  Opposite of Resume button color and background
+ */
+#linkedin-btn {
+  background: var(--lightGradient) !important;
+  color: var(--lightShade) !important;
+  transition: 0.7s background linear, 0.7s color linear !important;
+}
+#linkedin-btn:hover {
+  background: var(--lightShade) !important;
+  color: var(--darkAccent) !important;
 }
 
 /**
@@ -22,7 +101,7 @@
   min-width: 80%;
   margin: auto !important;
   box-shadow: var(--mediumShadow) !important;
-  border-radius: 10px;
+  border-radius: 10px !important;
   color: var(--mainBrand) !important;
 }
 
