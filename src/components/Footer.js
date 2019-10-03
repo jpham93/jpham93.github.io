@@ -11,7 +11,7 @@ import {
 const footerStyle = {
   width: '100vw',
   minHeight: '30px',
-  background: '#555',
+  background: 'var(--mainGradient)',
   textAlign: 'center',
   padding: '10px',
 };

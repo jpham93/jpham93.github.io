@@ -6,6 +6,7 @@ import {
   Card,
   Grid,
 } from 'semantic-ui-react';
+import './styles.css';
 
 /**
  * Technical Container
@@ -14,20 +15,16 @@ import {
  */
 const technicalContainer = {
   padding: '20px',
-}
+};
 
 /**
- * Card Styling
- * 
- * Uniform styling for each card
+ * Column Style
+ *
+ * Centering for each Grid Column
  */
-const cardStyle = {
-  minWidth: '80%',
+const columnStyle = {
   margin: 'auto',
-  fontSize: '1.2rem',
-  lineHeight: '1.8rem',
-  textAlign: 'center'
-}
+};
 
 /**
  * List Style
@@ -37,7 +34,35 @@ const cardStyle = {
 const listStyle = {
   listStyleType: 'none',
   padding: '0',
-}
+  height: '100%',
+  width: '100%',
+};
+
+/**
+ * Card header style
+ *
+ * styling of each card header
+ */
+const cardHeaderStyle = {
+  color: 'inherit',
+};
+/**
+ * Card Header Content Style
+ *
+ * parent container for header
+ */
+const cardHeaderContentStyle = {
+  paddingBottom: '0'
+};
+/**
+ * card content style
+ *
+ * removes spacing from card content body
+ */
+const cardContentStyle = {
+  padding: '0',
+  borderTop: 'none'
+};
 
 /**
  * Technical Functional Component
@@ -61,20 +86,17 @@ export default function () {
     skills: ['PHP 7', 'MySQL', 'Symfony 4', 'Elasticsearch']
   };
 
-  let key = 0;
   const cards = [personalStack, frontEnd, backEnd].map(card => {
-    key++;
     return (
-      <Grid.Column key={key}>
-        <Card raised style={cardStyle}>
-          <Card.Content>
-            <Card.Header>{card.header}</Card.Header>
+      <Grid.Column key={card.header} style={columnStyle}>
+        <Card raised className='card-style'>
+          <Card.Content style={cardHeaderContentStyle}>
+            <Card.Header style={cardHeaderStyle}>{card.header}</Card.Header>
           </Card.Content>
-          <Card.Content>
+          <Card.Content style={cardContentStyle}>
             <ul style={listStyle}>
               {card.skills.map(skill => {
-                key++;
-                return (<li style={{ color: 'black' }} key={key}>{skill}</li>)
+                return (<li className='card-list' key={skill}>{skill}</li>)
               })}
             </ul>
           </Card.Content>
@@ -85,7 +107,7 @@ export default function () {
 
   return (
     <Container fluid style={technicalContainer}>
-      <Header as='h2' textAlign='center' inverted>
+      <Header as='h2' textAlign='center'>
         <Icon name='database' />
         <Header.Content>Technical Skills</Header.Content>
       </Header>

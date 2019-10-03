@@ -1,0 +1,37 @@
+/**
+ * intro text container (Introduction.js)
+ *
+ * Styling for text container only.
+ */
+#intro-text-container {
+  font-size: 5em;
+  padding: 40px;
+  max-width: 630px !important;
+  flex-grow: 0;
+}
+
+/**
+ * Card Styling (Technical.js)
+ *
+ * Uniform styling for each card
+ */
+.card-style {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+  min-width: 80%;
+  margin: auto !important;
+  box-shadow: var(--mediumShadow) !important;
+  border-radius: 10px;
+  color: var(--mainBrand) !important;
+}
+
+/**
+ * card styling (Technical.js)
+ *
+ * Gives extra shadow effect for hover.
+ */
+.card-style:hover {
+  box-shadow: var(--darkShadow) !important;
+  color: var(--darkAccent) !important;
+}
