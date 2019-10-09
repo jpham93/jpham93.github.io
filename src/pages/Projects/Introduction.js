@@ -10,7 +10,7 @@ import {
  * Main container wrapper style
  */
 const containerStyle = {
-  margin: '5rem 0',
+  margin: '2rem 0 5rem 0',
 };
 
 /**
@@ -22,7 +22,12 @@ const pStyle = {
   fontSize: '1.5rem',
 };
 
-
+/**
+ * Introduction Component
+ *
+ * A quick introduction to the Project's page. Contains
+ * header and summary.
+ */
 export default function () {
   return (
     <Container style={containerStyle}>
