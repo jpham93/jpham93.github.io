@@ -12,11 +12,11 @@ import jp from '../../assets/logo/android-chrome-512x512.png';
 
 // Brand logos
 import html from '../../assets/brand-logos/html5.svg';
-import css from '../../assets/brand-logos/css3.svg';
+import css from '../../assets/brand-logos/css-5.svg';
 import js from '../../assets/brand-logos/javascript-4.svg';
 import jquery from '../../assets/brand-logos/jquery.svg';
 import ionic from '../../assets/brand-logos/ionic.svg';
-import react from '../../assets/brand-logos/react-1.svg';
+import react from '../../assets/brand-logos/react.svg';
 import angular from '../../assets/brand-logos/angular-icon-1.svg';
 import semantic from '../../assets/brand-logos/semantic-ui.svg';
 import bootstrap from '../../assets/brand-logos/bootstrap-4.svg';
@@ -32,11 +32,12 @@ import symfony from '../../assets/brand-logos/symfony.svg';
 import elasticsearch from '../../assets/brand-logos/elastic-elasticsearch.svg';
 import kibana from '../../assets/brand-logos/elastic-kibana.svg';
 import logstash from '../../assets/brand-logos/elastic-logstash.svg';
+import material from '../../assets/brand-logos/google-mdl-logo-1.svg';
 
 
 const project_logos = {vta, pomodoro, fcc, mhn, yelp_camp, jp};
 const brand_logos = {
-  html, css, js, jquery, ionic, react, angular, semantic,
+  html, css, js, jquery, ionic, react, angular, semantic, material,
   bootstrap, sass, d3, cordova, mysql, pg, linux, aws, bitnami, symfony, elasticsearch, kibana, logstash
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Button,
   Container,
   Header,
 } from 'semantic-ui-react';
@@ -27,16 +28,32 @@ const brandStyle = {
  * @param stackList - array either logos or name of the technology used (string)
  * @param links - array of objects to create buttons linking to related pages
  */
+
+function onClick() {
+
+}
+
 export default function ({title, description, stackList, links}) {
   return (
     <Container>
       <Header as='h2'>{title}</Header>
       <p>{description}</p>
-      {
-        stackList.map(stack => (
-          <img src={brand_logos[stack]} style={brandStyle}/>
-        ))
-      }
+      <div>
+        {stackList.map((stack, key) => (<img src={brand_logos[stack]} style={brandStyle} key={key}/>))}
+      </div>
+      <Button.Group>
+        {
+          links.map((link, key) =>
+            <Button
+              content={link.content}
+              icon={link.content}
+              onClick={() => window.open(link.url)}
+              color={link.color}
+              key={key}
+            />
+          )
+        }
+      </Button.Group>
     </Container>
   );
 }

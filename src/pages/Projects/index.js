@@ -17,6 +17,7 @@ import Pomodoro from './Pomodoro';
 import FCC from './FCC'
 import './projects.css';
 import {project_logos} from './logos';
+import ModalTemplate from './Modal'
 
 /**
  * Projects Container Style
@@ -151,7 +152,7 @@ export default function () {
       title: 'My Web Portfolio'
     },
     {
-      component: <FCC/>,
+      component: FCC,
       img: project_logos.fcc,
       title: 'Free Code Camp Collections'
     }
@@ -183,7 +184,7 @@ export default function () {
                     closeIcon
                     style={modalStyle}
                   >
-                    {component.component}
+                    {ModalTemplate(component.component)}
                     <Button color='red' onClick={() => setOpen(-1)} style={buttonStyle}>
                       <Icon name='close'/> Close
                     </Button>
@@ -196,4 +197,7 @@ export default function () {
       </Grid>
     </Container>
   );
+
+
+
 }
