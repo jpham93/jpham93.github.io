@@ -16,12 +16,7 @@ import MHNLanding from './MHNLanding';
 import Pomodoro from './Pomodoro';
 import FCC from './FCC'
 import './projects.css';
-import vta_logo from '../../assets/images/vta_logo.png';
-import pomodoro_img from '../../assets/images/pomodoro_app.png';
-import fcc_logo from '../../assets/images/freecodecamp.png';
-import mhn_logo from '../../assets/images/mhn_logo.png';
-import yelp_camp_img from '../../assets/images/yelp_camp_img.png';
-import jp_logo from '../../assets/logo/android-chrome-512x512.png'
+import {project_logos} from './logos';
 
 /**
  * Projects Container Style
@@ -50,7 +45,7 @@ const gridStyle = {
  */
 const columnStyle = {
   height: 'fit-content',
-}
+};
 
 /**
  * Cards Styling
@@ -99,7 +94,7 @@ const hiddenStyle = {
 const imgStyle = {
   width: '100%',
   height: 'auto',
-}
+};
 
 /**
  * Modal Styling
@@ -132,32 +127,32 @@ export default function () {
   const projectComponents = [
     {
       component: <Feedback/>,
-      img: vta_logo,
+      img: project_logos.vta,
       title: 'VTA Feedback App'
     },
     {
       component: <Pomodoro/>,
-      img: pomodoro_img,
+      img: project_logos.pomodoro,
       title: 'iOS Pomodoro Clock'
     },
     {
       component: <MHNLanding/>,
-      img: mhn_logo,
+      img: project_logos.mhn,
       title: 'Magic Hair & Nails Landing Page'
     },
     {
       component: <YelpCamp/>,
-      img: yelp_camp_img,
+      img: project_logos.yelp_camp,
       title: 'Yelp Camp'
     },
     {
       component: <Portfolio/>,
-      img: jp_logo,
+      img: project_logos.jp,
       title: 'My Web Portfolio'
     },
     {
       component: <FCC/>,
-      img: fcc_logo,
+      img: project_logos.fcc,
       title: 'Free Code Camp Collections'
     }
   ];
