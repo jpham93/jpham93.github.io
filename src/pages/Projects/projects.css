@@ -1,8 +1,12 @@
 /**
- *  Card styling for project/modal holder
+ * Card Styling
  *
- *
+ * Card styling for project/modal holder
  */
 .card-styling {
-
+  transform: none!important;
+  transition: box-shadow 0.5s linear;
+  border: none !important;
+  box-shadow: var(--lightShadow) !important;
+  border-radius: 0 !important;
 }

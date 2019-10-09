@@ -34,6 +34,25 @@ const projectsContainerStyle = {
 };
 
 /**
+ * Grid Styles
+ *
+ * change display/layout for Grid system to hug
+ * elements close to each other using flex
+ */
+const gridStyle = {
+  alignItems: 'center',
+};
+
+/**
+ * Column Style
+ *
+ * Styling for each column (wrapper for cards)
+ */
+const columnStyle = {
+  height: 'fit-content',
+}
+
+/**
  * Cards Styling
  *
  * Individual styling for each card component
@@ -83,6 +102,24 @@ const imgStyle = {
 }
 
 /**
+ * Modal Styling
+ *
+ *
+ */
+const modalStyle = {
+  padding: '20px',
+};
+
+/**
+ * close button Styling
+ */
+const buttonStyle = {
+  position: 'absolute',
+  right: '5px',
+  bottom: '10px'
+};
+
+/**
  * Projects Page component
  *
  * Contains all of the projects as components within this
@@ -128,25 +165,32 @@ export default function () {
   return (
     <Container style={projectsContainerStyle}>
       <Introduction/>
-      <Grid columns={3} doubling>
+      <Grid columns={3} doubling style={gridStyle}>
         {
           projectComponents.map((component, key) => {
             return (
-              <Grid.Column key={key}>
-                <Card onClick={() => setOpen(key)} style={cardStyle}>
+              <Grid.Column key={key} style={columnStyle}>
+                <Card onClick={() => setOpen(key)} style={cardStyle} className='card-styling'>
                   <Reveal animated='move'>
                     <Reveal.Content visible style={visibleStyle}>
                       <img src={component.img} style={imgStyle}/>
                     </Reveal.Content>
                     <Reveal.Content hidden style={hiddenStyle}>
-                      <span style={{fontSize: '40px'}}>Read More <Icon name='arrow alternate circle right outline'/></span>
+                      <span style={{fontSize: '34px'}}>Read More <Icon
+                        name='arrow alternate circle right outline'/></span>
                     </Reveal.Content>
                   </Reveal>
                   {/*Had to assign key to open in order to have the correct modal pop up*/}
-                  <Modal dimmer open={openKey === key} onClose={() => setOpen(-1)} closeIcon>
+                  <Modal
+                    dimmer
+                    open={openKey === key}
+                    onClose={() => setOpen(-1)}
+                    closeIcon
+                    style={modalStyle}
+                  >
                     {component.component}
-                    <Button onClick={() => setOpen(-1)}>
-                      Close
+                    <Button color='red' onClick={() => setOpen(-1)} style={buttonStyle}>
+                      <Icon name='close'/> Close
                     </Button>
                   </Modal>
                 </Card>
