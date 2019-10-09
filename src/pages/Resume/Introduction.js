@@ -7,7 +7,7 @@ import {
   Responsive,
 } from 'semantic-ui-react';
 import headshot from '../../assets/images/headshot.png';
-import './styles.css';
+import './resume.css';
 
 /**
  * Header Container Style
@@ -23,7 +23,7 @@ const introContainer = {
 };
 
 /**
- * imgStyle
+ * img Style
  *
  * Sizes and shapes image in a circle.
  * This actually styles a <div> container instead of
