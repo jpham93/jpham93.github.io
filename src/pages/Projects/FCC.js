@@ -1,13 +1,5 @@
-import React from 'react';
-import {
-  Container,
-  Button,
-  Header,
-  Grid,
-} from 'semantic-ui-react';
-
 /**
- * FCC functional component
+ * FCC content
  *
  * A collection of FreeCodeCamp projects.
  * Only Front-end Libraries + D3.js projects

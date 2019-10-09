@@ -100,7 +100,6 @@ const imgStyle = {
 /**
  * Modal Styling
  *
- *
  */
 const modalStyle = {
   padding: '20px',
@@ -124,30 +123,30 @@ const buttonStyle = {
 export default function () {
   const [openKey, setOpen] = useState(false);
 
-  // list of components exported here to be viewed as a modal.
+  // list of exported objects to be injected into template and viewed as a modal.
   const projectComponents = [
     {
-      component: <Feedback/>,
+      component: Feedback,
       img: project_logos.vta,
       title: 'VTA Feedback App'
     },
     {
-      component: <Pomodoro/>,
+      component: Pomodoro,
       img: project_logos.pomodoro,
       title: 'iOS Pomodoro Clock'
     },
     {
-      component: <MHNLanding/>,
+      component: MHNLanding,
       img: project_logos.mhn,
       title: 'Magic Hair & Nails Landing Page'
     },
     {
-      component: <YelpCamp/>,
+      component: YelpCamp,
       img: project_logos.yelp_camp,
       title: 'Yelp Camp'
     },
     {
-      component: <Portfolio/>,
+      component: Portfolio,
       img: project_logos.jp,
       title: 'My Web Portfolio'
     },
@@ -197,7 +196,4 @@ export default function () {
       </Grid>
     </Container>
   );
-
-
-
 }

@@ -33,12 +33,18 @@ import elasticsearch from '../../assets/brand-logos/elastic-elasticsearch.svg';
 import kibana from '../../assets/brand-logos/elastic-kibana.svg';
 import logstash from '../../assets/brand-logos/elastic-logstash.svg';
 import material from '../../assets/brand-logos/google-mdl-logo-1.svg';
+import passport from '../../assets/brand-logos/passport.svg';
+import heroku from '../../assets/brand-logos/heroku.svg';
+import mongodb from '../../assets/brand-logos/mongodb.svg';
+import node from '../../assets/brand-logos/nodejs-icon.svg';
+import wordpress from '../../assets/brand-logos/wordpress-blue.svg';
+import php from '../../assets/brand-logos/php-1.svg';
 
 
 const project_logos = {vta, pomodoro, fcc, mhn, yelp_camp, jp};
 const brand_logos = {
-  html, css, js, jquery, ionic, react, angular, semantic, material,
-  bootstrap, sass, d3, cordova, mysql, pg, linux, aws, bitnami, symfony, elasticsearch, kibana, logstash
+  html, css, js, jquery, ionic, react, angular, semantic, material, heroku, passport, mongodb, node, wordpress, php,
+  bootstrap, sass, d3, cordova, mysql, pg, linux, aws, bitnami, symfony, elasticsearch, kibana, logstash,
 };
 
 export {project_logos, brand_logos}

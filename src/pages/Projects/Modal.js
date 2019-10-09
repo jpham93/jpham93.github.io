@@ -46,7 +46,7 @@ export default function ({title, description, stackList, links}) {
           links.map((link, key) =>
             <Button
               content={link.content}
-              icon={link.content}
+              icon={link.icon}
               onClick={() => window.open(link.url)}
               color={link.color}
               key={key}
