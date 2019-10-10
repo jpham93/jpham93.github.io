@@ -6,8 +6,8 @@ import {
 
 const aboutContainer = {
   fontSize: '1.2rem',
-  padding: '5rem',
-  minHeight: 'calc(100vh - 36px)',
+  padding: 'var(--verticalPadding)',
+  minHeight: 'calc(100vh - var(--footerHeight))',
 };
 
 /**

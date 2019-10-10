@@ -7,8 +7,8 @@ import EmailForm from './EmailForm';
 
 const contactContainer = {
   fontSize: '1.2rem',
-  padding: '5rem',
-  minHeight: 'calc(100vh - 58px)',
+  padding: 'var(--verticalPadding)',
+  minHeight: 'calc(100vh - var(--footerHeight))',
 };
 
 export default function () {

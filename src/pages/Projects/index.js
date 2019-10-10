@@ -25,7 +25,7 @@ import ModalTemplate from './Modal'
  * Main style for the whole page wrapper
  */
 const projectsContainerStyle = {
-  padding: '6rem 0',
+  padding: 'var(--verticalPadding)',
   minHeight: 'calc(100vh - 58px)',
 };
 
