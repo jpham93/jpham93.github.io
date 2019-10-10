@@ -30,6 +30,7 @@ const mainStyle = {
  */
 const scrollUpBtnStyle = {
   background: 'rgba(0, 0, 0, 0)',
+  zIndex: '99',
 };
 
 function App() {

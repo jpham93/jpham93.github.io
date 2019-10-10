@@ -20,7 +20,7 @@ export default {
       {
         content: 'Github',
         icon: 'github',
-        url: 'https://github.com/jpham93/IonicPomdoro',
+        url: 'https://github.com/jpham93/ionic-pomdoro',
         color: 'orange'
       },
     ]

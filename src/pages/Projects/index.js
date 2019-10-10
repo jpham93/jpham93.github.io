@@ -40,23 +40,15 @@ const gridStyle = {
 };
 
 /**
- * Column Style
- *
- * Styling for each column (wrapper for cards)
- */
-const columnStyle = {
-  height: 'fit-content',
-};
-
-/**
  * Cards Styling
  *
  * Individual styling for each card component
  */
 const cardStyle = {
-  width: '30%',
-  minWidth: '300px',
+  width: '60%',
+  minWidth: '280px',
   height: 'auto',
+  margin: 'auto',
   padding: '5px',
   background: 'var(--darkGradient)',
 };
@@ -160,11 +152,11 @@ export default function () {
   return (
     <Container style={projectsContainerStyle}>
       <Introduction/>
-      <Grid columns={3} doubling style={gridStyle}>
+      <Grid columns={3} doubling style={gridStyle} stackable>
         {
           projectComponents.map((component, key) => {
             return (
-              <Grid.Column key={key} style={columnStyle}>
+              <Grid.Column key={key}>
                 <Card onClick={() => setOpen(key)} style={cardStyle} className='card-styling'>
                   <Reveal animated='move'>
                     <Reveal.Content visible style={visibleStyle}>
