@@ -27,7 +27,8 @@ export default {
         content: 'Available In Person',
         icon: 'dont',
         url: '#',
-        color: 'range'
+        color: 'grey',
+        disabled: true,
       },
     ]
 };

@@ -110,8 +110,8 @@ const modalStyle = {
  */
 const buttonStyle = {
   position: 'absolute',
-  right: '5px',
-  bottom: '10px'
+  right: '20px',
+  bottom: '20px'
 };
 
 /**

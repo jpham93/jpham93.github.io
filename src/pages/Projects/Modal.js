@@ -13,8 +13,9 @@ import {brand_logos} from "./logos";
  */
 const brandStyle = {
   display: 'inline-block',
-  width: '20px',
-  height: 'auto',
+  height: '30px',
+  width: 'auto',
+  margin: '1px'
 };
 
 /**
@@ -28,17 +29,12 @@ const brandStyle = {
  * @param stackList - array either logos or name of the technology used (string)
  * @param links - array of objects to create buttons linking to related pages
  */
-
-function onClick() {
-
-}
-
 export default function ({title, description, stackList, links}) {
   return (
     <Container>
       <Header as='h2'>{title}</Header>
       <p>{description}</p>
-      <div>
+      <div style={{marginBottom: '5px'}}>
         {stackList.map((stack, key) => (<img src={brand_logos[stack]} style={brandStyle} key={key}/>))}
       </div>
       <Button.Group>
@@ -50,6 +46,8 @@ export default function ({title, description, stackList, links}) {
               onClick={() => window.open(link.url)}
               color={link.color}
               key={key}
+              disabled={link.disabled}
+              onClick={() => window.open(link.url)}
             />
           )
         }
