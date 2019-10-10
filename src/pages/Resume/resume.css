@@ -39,7 +39,7 @@
   margin: 5px;
   padding: 2px;
   box-shadow: none;
-  transition: box-shadow 1s linear;
+  transition: box-shadow 0.7s linear;
 }
 
 .button-wrapper:hover {
@@ -66,7 +66,7 @@
 #resume-btn {
   background: var(--lightShade) !important;
   color: var(--darkAccent) !important;
-  transition: 0.7s background linear, 0.7s color linear !important;
+  transition: 0.5s background linear, 0.5s color linear !important;
 }
 
 #resume-btn:hover {
@@ -82,7 +82,7 @@
 #linkedin-btn {
   background: var(--lightGradient) !important;
   color: var(--lightShade) !important;
-  transition: 0.7s background linear, 0.7s color linear !important;
+  transition: 0.5s background linear, 0.5s color linear !important;
 }
 #linkedin-btn:hover {
   background: var(--lightShade) !important;

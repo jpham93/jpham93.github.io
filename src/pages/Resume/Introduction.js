@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Container,
   Header,
@@ -7,7 +7,7 @@ import {
   Responsive,
 } from 'semantic-ui-react';
 import headshot from '../../assets/images/headshot.png';
-import './styles.css';
+import './resume.css';
 
 /**
  * Header Container Style
@@ -15,7 +15,7 @@ import './styles.css';
  * Styles the parent container of the Header component.
  */
 const introContainer = {
-  minWidth: '500px',
+  maxWidth: '950px',
   display: 'flex',
   padding: '5em 2em',
   minHeight: '170px',
@@ -23,7 +23,7 @@ const introContainer = {
 };
 
 /**
- * imgStyle
+ * img Style
  *
  * Sizes and shapes image in a circle.
  * This actually styles a <div> container instead of
@@ -39,13 +39,16 @@ const imgStyle = {
 };
 
 export default function () {
+
+
+
   const getResume = () => {
     window.open('Resume_JP.pdf');
   };
 
   const openLinkedin = () => {
     window.open('https://linkedin.com/in/james-pham-0293')
-  }
+  };
 
   return (
     <Container style={introContainer}>

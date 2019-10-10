@@ -14,14 +14,23 @@ import {
   Contact
 } from './pages';
 
-
+/**
+ * main style
+ *
+ * Style for the entire web page
+ */
 const mainStyle = {
   background: 'var(--lightShade)',
 };
 
+/**
+ * scroll up button style
+ *
+ * style scroll up button
+ */
 const scrollUpBtnStyle = {
-  background: 'var(--lightAccent)',
-  color: 'var(--darkShade)'
+  background: 'rgba(0, 0, 0, 0)',
+  zIndex: '99',
 };
 
 function App() {
