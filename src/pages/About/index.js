@@ -6,8 +6,8 @@ import {
 
 const aboutContainer = {
   fontSize: '1.2rem',
-  padding: '5rem',
-  minHeight: 'calc(100vh - 36px)',
+  padding: 'var(--verticalPadding)',
+  minHeight: 'calc(100vh - var(--footerHeight))',
 };
 
 /**
@@ -18,13 +18,13 @@ const aboutContainer = {
 export default function () {
   return (
     <Container style={aboutContainer}>
-      <Header inverted as='h1' textAlign='center'>About Me!</Header>
+      <Header as='h1' textAlign='center'>About Me!</Header>
       <p>
         I am a Bay Area Native and still currently live in the area. I own a
         loving pitbull named Zoe. My hobbies including reading fiction,
         following professional sports, exercise, and martial arts. I've boxed for several years now, and was formerly an amateur competitor. Brazillian Jiu-Jitsu is also another martial art that I just picked up, and I thoroughly enjoy it. On my relaxation time, I watch television, mainly Netflix series. Recently, I've entrenched myself in fiction as well, after being inspired to read more novels by large fandoms such as the <em>A Song of Ice and Fire</em> universe (better known as Game of Thrones from the television series) or more recently, <em>The Expanse</em> series.
       </p>
-      <Header inverted as='h3'>How I started Coding</Header>
+      <Header style={{color: 'var(--darkAccent)'}} as='h3'>How I started Coding</Header>
       <p>
         Becoming a web developer was not my original career path. In fact,
         coding was not even in my repertoire until early 2017 when I first

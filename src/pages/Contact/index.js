@@ -7,15 +7,15 @@ import EmailForm from './EmailForm';
 
 const contactContainer = {
   fontSize: '1.2rem',
-  padding: '5rem',
-  minHeight: 'calc(100vh - 58px)',
+  padding: 'var(--verticalPadding)',
+  minHeight: 'calc(100vh - var(--footerHeight))',
 };
 
 export default function () {
   return (
     <Container fluid>
       <Container style={contactContainer}>
-        <Header as='h1' textAlign='center' inverted>Contact</Header>
+        <Header as='h1' textAlign='center'>Contact</Header>
         <p>
           If you would like to contact me, my email is provided in header above
           the menu. You can also email using the form below if you prefer to do

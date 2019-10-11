@@ -18,7 +18,7 @@ const menuStyle = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItem: 'center',
-  minHeight: '50px',
+  height: 'var(--navHeight)',
   border: 'none',
   borderRadius: '0',
   boxShadow: 'none',

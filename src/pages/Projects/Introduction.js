@@ -10,7 +10,7 @@ import {
  * Main container wrapper style
  */
 const containerStyle = {
-  margin: '2rem 0 5rem 0',
+  marginBottom: '5rem',
 };
 
 /**

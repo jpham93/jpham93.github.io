@@ -10,7 +10,7 @@ import {
  */
 const footerStyle = {
   width: '100%',
-  minHeight: '30px',
+  minHeight: 'var(--footerHeight)',
   background: 'var(--mainGradient)',
   textAlign: 'center',
   padding: '10px',
