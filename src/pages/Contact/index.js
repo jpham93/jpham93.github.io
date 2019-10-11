@@ -15,7 +15,7 @@ export default function () {
   return (
     <Container fluid>
       <Container style={contactContainer}>
-        <Header as='h1' textAlign='center' inverted>Contact</Header>
+        <Header as='h1' textAlign='center'>Contact</Header>
         <p>
           If you would like to contact me, my email is provided in header above
           the menu. You can also email using the form below if you prefer to do
