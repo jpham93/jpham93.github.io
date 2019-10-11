@@ -44,7 +44,9 @@ export default function ({visible, setVisible, setActive, selectPage}) {
         onClick={() => {
           setActive('/');
           selectPage('/');
-        }}>
+        }}
+        className='sidebar-item'
+      >
         <Icon name='address card outline'/>
         Resume
       </Menu.Item>
@@ -52,14 +54,18 @@ export default function ({visible, setVisible, setActive, selectPage}) {
         onClick={() => {
           setActive('/projects');
           selectPage('/projects');
-        }}>
+        }}
+        className='sidebar-item'
+      >
         <Icon name='code'/>
         Projects
       </Menu.Item>
       <Menu.Item onClick={() => {
         setActive('/about');
         selectPage('/about');
-      }}>
+      }}
+                 className='sidebar-item'
+      >
         <Icon name='user'/>
         About
       </Menu.Item>
@@ -67,7 +73,9 @@ export default function ({visible, setVisible, setActive, selectPage}) {
         onClick={() => {
           setActive('/contact');
           selectPage('/contact');
-        }}>
+        }}
+        className='sidebar-item'
+      >
         <Icon name='mail'/>
         Contact
       </Menu.Item>

@@ -1,13 +1,16 @@
 /** Components Styling **/
+
+/** Navbar.js **/
 #navbar-container {
   width: 95% !important;
 }
 
 /* Navbar hover for non-inverted */
 .menu-item:hover {
-  color: #ffd700 !important;
+  color: var(--darkAccent) !important;
 }
 
+/* Mobile navbar toggle */
 .hamburger-animation {
   color: var(--lightShade) !important;
   transition: color 1s ease;
@@ -19,4 +22,14 @@
   background: var(--mainGradient) !important;
   color: var(--lightShade) !important;
   transition: box-shadow 1s ease, background 0.2s linear, color 1s ease;
+}
+
+/** Sidebar.js **/
+.sidebar-item:active {
+  border: none !important;
+}
+
+/** Footer.js **/
+.links:hover {
+  color: var(--darkShade) !important;
 }
