@@ -1,4 +1,13 @@
 /** Components Styling **/
+#navbar-container {
+  width: 95% !important;
+}
+
+
+.hamburger-animation {
+  color: var(--lightShade) !important;
+  transition: color 1s ease;
+}
 
 /* Navbar animation class */
 .navbar-animation {
