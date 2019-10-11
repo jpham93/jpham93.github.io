@@ -3,6 +3,10 @@
   width: 95% !important;
 }
 
+/* Navbar hover for non-inverted */
+.menu-item:hover {
+  color: #ffd700 !important;
+}
 
 .hamburger-animation {
   color: var(--lightShade) !important;

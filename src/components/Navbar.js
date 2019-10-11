@@ -116,6 +116,7 @@ export default withRouter(function (props) {
               setActive('/');
               selectPage('/');
             }}
+            className='menu-item'
           >
             Resume
           </Menu.Item>
@@ -125,6 +126,7 @@ export default withRouter(function (props) {
               setActive('/projects');
               selectPage('/projects');
             }}
+            className='menu-item'
           >
             Projects
           </Menu.Item>
@@ -134,6 +136,7 @@ export default withRouter(function (props) {
               setActive('/about');
               selectPage('/about');
             }}
+            className='menu-item'
           >
             About Me
           </Menu.Item>
@@ -143,6 +146,7 @@ export default withRouter(function (props) {
               setActive('/contact');
               selectPage('/contact');
             }}
+            className='menu-item'
           >
             Contact
           </Menu.Item>

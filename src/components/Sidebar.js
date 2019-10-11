@@ -5,11 +5,27 @@ import {
   Icon,
 } from 'semantic-ui-react';
 
+/**
+ * Sidebar style
+ *
+ * @type {{color: string, background: string}}
+ */
 const sidebarStyle = {
   background: 'var(--mainGradient)',
   color: 'var(--lightShade)',
 };
 
+/**
+ *  Sidebar sub component
+ *
+ *  A sidebar component to be added to the main Navbar component
+ *
+ * @param visible - boolean to render sidebar visible
+ * @param setVisible - toggles visible variable
+ * @param setActive - function that toggles active link
+ * @param selectPage - function that pushes route name to history
+ * @returns {*}
+ */
 export default function ({visible, setVisible, setActive, selectPage}) {
   return (
     <Sidebar
