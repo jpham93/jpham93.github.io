@@ -14,7 +14,7 @@ import './resume.css';
  * Styling for parent container
  */
 const technicalContainer = {
-  padding: '20px',
+  padding: '20px 0',
 };
 
 /**

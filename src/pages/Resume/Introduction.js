@@ -17,7 +17,7 @@ import './resume.css';
 const introContainer = {
   maxWidth: '950px',
   display: 'flex',
-  padding: '5em 2em',
+  padding: '5em 0',
   minHeight: '170px',
   justifyContent: 'center'
 };
