@@ -13,7 +13,7 @@ import TutorExperience from './TutorExperience'
  * Parent Container for the entire functional component
  */
 const experienceContainer = {
-  padding: '20px',
+  padding: '20px 0',
   marginBottom: '4em',
 };
 
