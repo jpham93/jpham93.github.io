@@ -9,6 +9,7 @@ import {
 } from "semantic-ui-react";
 import vta_logo from "../../../assets/images/vta_logo_2017.svg";
 import devops_handbook from "../../../assets/images/devops_handbook.png";
+import './experience.css';
 
 const containerStyle = {
   display: 'flex',
@@ -73,6 +74,11 @@ const imgStyle = {
   display: 'block',
 };
 
+/**
+ * VtaExperience Component
+ *
+ * A card component that shares my internship experience at VTA
+ */
 export default function () {
   const [isOpen, setOpen] = useState(false);
 
@@ -87,10 +93,10 @@ export default function () {
                 <img src={vta_logo} style={headerLogoStyle}/>
               </Responsive>
             </Header>
-            <p style={{fontSize: '1.2em'}}>As web developer intern at VTA, I work closely with a Senior
-              Full Stack Engineer and a Senior DevOps Engineer. My daily work
-              involves coding new features, providing reviews for pull requests, and
-              many other industry standard practices.</p>
+            <p style={{fontSize: '1.2em'}}>I am a full stack web developer intern. Here, I learn from
+              a Senior Full Stack Engineer and a Senior DevOps Engineer. My daily work
+              includes developing new features, providing code reviews, and
+              participating in daily stand ups.</p>
           </Card.Content>
           <a onClick={() => setOpen(!isOpen)} style={{color:'var(--lightAccent)'}}>
             {
@@ -105,44 +111,43 @@ export default function () {
             isOpen &&
             <div>
               <Header as='h3' style={{color: 'var(--darkAccent)'}}>Feedback Application</Header>
-              <p>VTA is developing a progressive web application to enable customers
-                tunnel direct feedback to the customer service department. Because
-                this application is built internally, I had the pleasure of
-                participating in its development cycle from the early planning stages
-                to executing code implementations. My involvement in the development
-                process includes:
+              <p>
+                VTA is currently developing a mobile application to help customers
+                provide feedback to our organization. Because
+                this application is being built internally, I participated in its Software Development Life Cycle (SLDC).
+                My involvement in the development process includes:
               </p>
               <ul>
-                <li>Creating work packages for our application's roadmap using
-                  Agile Epics, Stories, Features, and Tasks. Each task was managed
-                  through Open Project.
+                <li>
+                  Creating work packages for our application's road map by logging
+                  Agile Epics, Stories, Features, and Tasks for the DevOps team to complete.
                 </li>
-                <li>Coding mockups to consumer specifications defined in Invasion.</li>
-                <li>Working and communicating with our stakeholders to</li>
-                <li>Executing work packages by creating features and adding to code
-                  shared repository via Pull Requests.
+                <li>Producing code replicas of mock ups to stakeholders' specifications.</li>
+                <li>Communicating face to face with our stakeholders</li>
+                <li>
+                  Following Github's Pull Request work flow when committing code to a new branch.
                 </li>
-                <li>Using and testing with local Elasticsearch Index to plan and
+                <li>
+                  Using and testing with a local Elasticsearch Index to plan and
                   transform JSON formatted data to Elastic search documentation.
                 </li>
               </ul>
               <Header as='h3' style={{color: 'var(--darkAccent)'}}>Participating in Workshops</Header>
-              <p>VTA sponsors many activies that values ongoing education to
-                strengthen, retool, and keep lifelong learners current with the
-                latest development technology. I got to experience both internal and
-                external workshops in my internship.</p>
+              <p>VTA sponsors many activities that value ongoing education to
+                strengthen, retool, and ensure that we are lifelong learners. I was fortunate to experience
+                both internal and external workshops in my internship.</p>
               <ul>
                 <li>Attended MuleSoft's workshop and created APIs using their Anypoint Platform.</li>
-                <li>Attened our internal teams Technology Learning Series (TLS) and
+                <li>Received hands-on professional training for Elastic's tools as part of their 2019 world tour.</li>
+                <li>Participated in our internal teams Technology Learning Series (TLS) and
                   learned about Wordpress, Agile Methodolgies, etc. – I
-                  actually used the gained knowledge from Wordpress to create a
-                  landing page for my mom's business.
+                  later used the gained knowledge from Wordpress to create a
+                  landing page for my mom's business!
                 </li>
               </ul>
               <Header as='h3' style={{color: 'var(--darkAccent)'}}>Books</Header>
               <p>As a supplement to my internship, I also read <em>The DevOps Handbook: How to Create World-Class
-                Agility,
-                Reliability, & Security in Technology Organization</em></p>
+                Agility, Reliability, & Security in Technology Organization</em></p>
               <img style={imgStyle} src={devops_handbook} alt='The DevOps Handbook Cover'/>
             </div>
           }

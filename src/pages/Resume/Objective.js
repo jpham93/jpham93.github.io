@@ -30,7 +30,7 @@ const paragraphStyle = {
 /**
  * Objective functional Component
  * 
- * Mission Statement as a webdeveloper
+ * Mission Statement as a web developer
  */
 export default function () {
   return (
@@ -41,8 +41,9 @@ export default function () {
       </Header>
       <Container>
         <p style={paragraphStyle}>
-          My goal is to develop cutting edge web and mobile apps using the latest technologies. I focus primarily on front-end development, but I also have real experience developing back-end applications as well!
-      </p>
+          Deliver detail, persistence, and professional experience to customers while maintaining Agile standards
+          and best practices.
+        </p>
       </Container>
     </Container>
   );

@@ -71,8 +71,9 @@ export default function () {
               </Responsive>
             </Header>
             <Header as='h3' style={{color: 'var(--lightShade)'}}>Computer Lab Volunteer Tutor</Header>
-            <p style={{fontSize:'1.2em'}}>During my return to education, I strengthened my knowledge by giving back and helping other students in
-              programming courses at De Anza. I helped students with courses in C++, Python, and Linux.</p>
+            <p style={{fontSize:'1.2em'}}>During my return to education, I strengthened my programming knowledge by
+              giving back and helping other students in programming courses at De Anza. I helped students with courses
+              in C++, Python, and Linux.</p>
           </Card.Content>
         </Card>
       </div>
