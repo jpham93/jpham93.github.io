@@ -44,11 +44,9 @@ export default function () {
       <Container style={contactContainer}>
         <Header as='h1' textAlign='center'>Contact</Header>
         <p style={{fontSize: '1.2em'}}>
-          If you would like to contact me, my email is provided in header above
-          the menu. You can also email using the form below if you prefer to do
-          it from this web page. If you would like to set up a phone call or
-          Video chat, please email a request with your contact information.
-          Thank you!
+          If you would like to contact me, you can send an email to the address listed at the top of the Resume page.
+          You can also use the contact form below if you prefer. You can also explore my other web profiles with below
+          links. Thank you!
         </p>
         <Container style={logoContainer}>
           {
