@@ -7,10 +7,11 @@
 export default {
   title: 'FCC Mini Projects Collection',
   description: `
-    This is an archive of my first development projects. Although all of these projects are single page applications. They 
-    highlight the development of skills from the beginning. The first portion of my collection covers Front-end 
-    Libraries. I used mainly React to make theses applications, but I also mixed it with jQuery, Sass, Bootstrap, and 
-    Material Design. Code can be found directly in each pen or in its individual repository within Github for each project.
+    The Free Code Camp project collections represent my very initial development projects. Although all of these 
+    projects are single-page applications, they highlight the critical fundamental skills. The first portion of my 
+    collection covers Front-End Libraries. I mainly used React to make these applications, but I also mixed in jQuery, 
+    Sass, Bootstrap, and Material Design. The code for each project can be found directly in each Codepen project or its 
+    repository within Github.
   `,
   stackList: ['react', 'd3', 'jquery', 'sass', 'material', 'bootstrap', 'html', 'css', 'js', 'node'],
   links: [

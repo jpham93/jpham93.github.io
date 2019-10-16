@@ -8,15 +8,15 @@ export default {
   title: 'Portfolio Page',
   description:
     `
-    This entire web page is one of my projects itself! However, I wanted to highlight it, because this is my first 
-    project outside of my internship where I applied proper Github workflow. Using knowledge from my VTA
-    internship, I documentated the planning and execution through a series of Github issues, branches, and pull request.
-    This entire project runs on React with a React implemented Semantic UI. This project also uses React router to 
-    dynamically render React components web pages. This project is deployed in two places, Github Pages, and an 
-    AWS EC2 instance. A link of this website's source code can be found in the Github icon.
+      This entire web page is one of my projects itself! However, I wanted to highlight it, because this is my first 
+      project outside of my internship, where I applied proper Github workflow. Using knowledge from my VTA
+      internship, I documented the planning and execution through a series of Github issues, branches, and pull 
+      requests. This entire project runs on React and Semantic UI. This project also uses React Router to render web 
+      pages dynamically. I deployed this project in an AWS EC2 instance. The Github button below links to this website's 
+      source code.
   `,
   stackList:
-    ['react', 'js', 'css', 'node', 'aws'],
+    ['react', 'js', 'css', 'node', 'aws', 'php'],
   links:
     [
       {
