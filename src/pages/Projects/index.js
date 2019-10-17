@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, Component} from 'react';
 import {
   Container,
   Grid,
@@ -106,86 +106,87 @@ const buttonStyle = {
   bottom: '20px'
 };
 
+// list of exported objects to be injected into template and viewed as a modal.
+const projectComponents = [
+  {
+    component: Feedback,
+    img: project_logos.vta,
+    title: 'VTA Feedback App'
+  },
+  {
+    component: Pomodoro,
+    img: project_logos.pomodoro,
+    title: 'iOS Pomodoro Clock'
+  },
+  {
+    component: MHNLanding,
+    img: project_logos.mhn,
+    title: 'Magic Hair & Nails Landing Page'
+  },
+  {
+    component: YelpCamp,
+    img: project_logos.yelp_camp,
+    title: 'Yelp Camp'
+  },
+  {
+    component: Portfolio,
+    img: project_logos.jp,
+    title: 'My Web Portfolio'
+  },
+  {
+    component: FCC,
+    img: project_logos.fcc,
+    title: 'Free Code Camp Collections'
+  }
+];
+
 /**
  * Projects Page component
  *
  * Contains all of the projects as components within this
  * page with summary and external links.
  */
-export default function () {
-  const [openKey, setOpen] = useState(false);
+export default class extends Component {
+  state = {openKey: -1}
 
-  // list of exported objects to be injected into template and viewed as a modal.
-  const projectComponents = [
-    {
-      component: Feedback,
-      img: project_logos.vta,
-      title: 'VTA Feedback App'
-    },
-    {
-      component: Pomodoro,
-      img: project_logos.pomodoro,
-      title: 'iOS Pomodoro Clock'
-    },
-    {
-      component: MHNLanding,
-      img: project_logos.mhn,
-      title: 'Magic Hair & Nails Landing Page'
-    },
-    {
-      component: YelpCamp,
-      img: project_logos.yelp_camp,
-      title: 'Yelp Camp'
-    },
-    {
-      component: Portfolio,
-      img: project_logos.jp,
-      title: 'My Web Portfolio'
-    },
-    {
-      component: FCC,
-      img: project_logos.fcc,
-      title: 'Free Code Camp Collections'
-    }
-  ];
+  setOpen = (val) => {this.setState({openKey: val}); console.log(this.state.openKey);}
 
-  return (
-    <Container style={projectsContainerStyle}>
-      <Introduction/>
-      <Grid columns={3} doubling style={gridStyle} stackable>
-        {
-          projectComponents.map((component, key) => {
-            return (
-              <Grid.Column key={key}>
-                <Card onClick={() => setOpen(key)} style={cardStyle} className='card-styling'>
-                  <Reveal animated='move'>
-                    <Reveal.Content visible style={visibleStyle}>
-                      <img src={component.img} style={imgStyle}/>
-                    </Reveal.Content>
-                    <Reveal.Content hidden style={hiddenStyle}>
+  render() {
+    return (
+      <Container style={projectsContainerStyle}>
+        <Introduction/>
+        <Grid columns={3} doubling style={gridStyle} stackable>
+          {
+            projectComponents.map((component, key) => {
+              return (
+                <Grid.Column key={key}>
+                  <Card onClick={() => this.setOpen(key)} style={cardStyle} className='card-styling'>
+                    <Reveal animated='move'>
+                      <Reveal.Content visible style={visibleStyle}>
+                        <img src={component.img} style={imgStyle}/>
+                      </Reveal.Content>
+                      <Reveal.Content hidden style={hiddenStyle}>
                       <span style={{fontSize: '34px'}}>Read More <Icon
                         name='arrow alternate circle right outline'/></span>
-                    </Reveal.Content>
-                  </Reveal>
-                  {/*Had to assign key to open in order to have the correct modal pop up*/}
-                  <Modal
-                    dimmer
-                    open={openKey === key}
-                    onClose={() => setOpen(-1)}
-                    closeIcon
-                    style={modalStyle}
-                  >
-                    {ModalTemplate(component.component)}
-                    <Button color='red' onClick={() => setOpen(-1)} style={buttonStyle}>
-                      <Icon name='close'/> Close
-                    </Button>
-                  </Modal>
-                </Card>
-              </Grid.Column>
-            )
-          })
-        }
-      </Grid>
-    </Container>
-  );
+                      </Reveal.Content>
+                    </Reveal>
+                    {/*Had to assign key to open in order to have the correct modal pop up*/}
+                    <Modal
+                      dimmer
+                      open={this.state.openKey === key}
+                      closeIcon
+                      onClose={() => this.setOpen(-1)}
+                      style={modalStyle}
+                    >
+                      {ModalTemplate(component.component)}
+                    </Modal>
+                  </Card>
+                </Grid.Column>
+              )
+            })
+          }
+        </Grid>
+      </Container>
+    );
+  }
 }

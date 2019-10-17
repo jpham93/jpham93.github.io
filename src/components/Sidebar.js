@@ -4,6 +4,7 @@ import {
   Menu,
   Icon,
 } from 'semantic-ui-react';
+import './styles.css';
 
 /**
  * Sidebar style
@@ -26,9 +27,10 @@ const sidebarStyle = {
  * @param selectPage - function that pushes route name to history
  * @returns {*}
  */
-export default function ({visible, setVisible, setActive, selectPage}) {
+export default function ({visible, setVisible, activeItem, setActive, selectPage}) {
   return (
     <Sidebar
+      id='sidebar-menu'
       as={Menu}
       animation='overlay'
       icon='labeled'
@@ -41,6 +43,7 @@ export default function ({visible, setVisible, setActive, selectPage}) {
       inverted
     >
       <Menu.Item
+        active={activeItem === '/'}
         onClick={() => {
           setActive('/');
           selectPage('/');
@@ -51,6 +54,7 @@ export default function ({visible, setVisible, setActive, selectPage}) {
         Resume
       </Menu.Item>
       <Menu.Item
+        active={activeItem === '/projects'}
         onClick={() => {
           setActive('/projects');
           selectPage('/projects');
@@ -60,16 +64,19 @@ export default function ({visible, setVisible, setActive, selectPage}) {
         <Icon name='code'/>
         Projects
       </Menu.Item>
-      <Menu.Item onClick={() => {
-        setActive('/about');
-        selectPage('/about');
-      }}
-                 className='sidebar-item'
+      <Menu.Item
+        active={activeItem === '/about'}
+        onClick={() => {
+          setActive('/about');
+          selectPage('/about');
+        }}
+        className='sidebar-item'
       >
         <Icon name='user'/>
         About
       </Menu.Item>
       <Menu.Item
+        active={activeItem === '/contact'}
         onClick={() => {
           setActive('/contact');
           selectPage('/contact');
