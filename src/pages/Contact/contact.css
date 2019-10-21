@@ -3,3 +3,8 @@
   width: auto;
   margin: 2px auto;
 }
+
+#submit-button {
+  display: block;
+  margin: auto;
+}

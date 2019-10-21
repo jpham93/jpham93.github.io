@@ -106,9 +106,9 @@ export default function () {
   });
 
   return (
-    <Container fluid style={technicalContainer}>
-      <Header as='h2' textAlign='center'>
-        <Icon name='database' />
+    <Container fluid style={technicalContainer} id='technical-container'>
+      <Header as='h2'>
+        <Icon name='database' style={{textIndent: '0.5em'}}/>
         <Header.Content>Technical Skills</Header.Content>
       </Header>
       <Grid stackable columns={3}>

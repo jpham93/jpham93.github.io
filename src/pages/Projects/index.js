@@ -1,4 +1,4 @@
-import React, {useState, useEffect, Component} from 'react';
+import React, {useState} from 'react';
 import {
   Container,
   Grid,
@@ -18,6 +18,8 @@ import FCC from './FCC'
 import './projects.css';
 import {project_logos} from './logos';
 import ModalTemplate from './Modal'
+
+const $ = window.$;
 
 /**
  * Projects Container Style
@@ -95,6 +97,7 @@ const imgStyle = {
  */
 const modalStyle = {
   padding: '20px',
+  zIndex: '99',
 };
 
 /**
@@ -146,47 +149,50 @@ const projectComponents = [
  * Contains all of the projects as components within this
  * page with summary and external links.
  */
-export default class extends Component {
-  state = {openKey: -1}
+export default function () {
+  const [openKey, setOpen] = useState(-1);
 
-  setOpen = (val) => {this.setState({openKey: val}); console.log(this.state.openKey);}
-
-  render() {
-    return (
-      <Container style={projectsContainerStyle}>
-        <Introduction/>
-        <Grid columns={3} doubling style={gridStyle} stackable>
-          {
-            projectComponents.map((component, key) => {
-              return (
-                <Grid.Column key={key}>
-                  <Card onClick={() => this.setOpen(key)} style={cardStyle} className='card-styling'>
-                    <Reveal animated='move'>
-                      <Reveal.Content visible style={visibleStyle}>
-                        <img src={component.img} style={imgStyle}/>
-                      </Reveal.Content>
-                      <Reveal.Content hidden style={hiddenStyle}>
+  return (
+    <Container style={projectsContainerStyle}>
+      <Introduction/>
+      <Grid columns={3} doubling style={gridStyle} stackable>
+        {
+          projectComponents.map((component, key) => {
+            return (
+              <Grid.Column key={key}>
+                <Card onClick={() => {
+                  // required to fix button
+                  if (openKey !== key) setOpen(key);
+                }}
+                      style={cardStyle}
+                      className='card-styling'>
+                  <Reveal animated='move'>
+                    <Reveal.Content visible style={visibleStyle}>
+                      <img src={component.img} style={imgStyle}/>
+                    </Reveal.Content>
+                    <Reveal.Content hidden style={hiddenStyle}>
                       <span style={{fontSize: '34px'}}>Read More <Icon
                         name='arrow alternate circle right outline'/></span>
-                      </Reveal.Content>
-                    </Reveal>
-                    {/*Had to assign key to open in order to have the correct modal pop up*/}
-                    <Modal
-                      dimmer
-                      open={this.state.openKey === key}
-                      closeIcon
-                      onClose={() => this.setOpen(-1)}
-                      style={modalStyle}
-                    >
-                      {ModalTemplate(component.component)}
-                    </Modal>
-                  </Card>
-                </Grid.Column>
-              )
-            })
-          }
-        </Grid>
-      </Container>
-    );
-  }
+                    </Reveal.Content>
+                  </Reveal>
+                  {/*Had to assign key to open in order to have the correct modal pop up*/}
+                  <Modal
+                    dimmer
+                    open={openKey === key}
+                    closeIcon
+                    onClose={() => {
+                      setOpen(-1);
+                    }}
+                    style={modalStyle}
+                  >
+                    {ModalTemplate(component.component)}
+                  </Modal>
+                </Card>
+              </Grid.Column>
+            )
+          })
+        }
+      </Grid>
+    </Container>
+  );
 }

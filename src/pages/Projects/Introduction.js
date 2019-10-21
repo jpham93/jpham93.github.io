@@ -20,6 +20,7 @@ const containerStyle = {
  */
 const pStyle = {
   fontSize: '1.5rem',
+  textAlign: 'center',
 };
 
 /**

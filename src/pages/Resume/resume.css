@@ -51,6 +51,15 @@
 }
 
 /**
+ *  Technical Container (Technical.js)
+ *
+ *  removes margin from mobile view
+ */
+#technical-container {
+  margin: 0 !important;
+}
+
+/**
  *  Button styling (Introduction.js). Applies to both buttons here
  *
  *  styling for intro section buttons. This styling is borrowed from
