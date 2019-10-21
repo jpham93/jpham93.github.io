@@ -3,7 +3,6 @@ import {
   Menu,
   Container,
   Responsive,
-  Icon,
   Button,
 } from 'semantic-ui-react';
 import {withRouter} from 'react-router-dom';

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import {
   Container,
   Header,
@@ -39,9 +39,6 @@ const imgStyle = {
 };
 
 export default function () {
-
-
-
   const getResume = () => {
     window.open('Resume_JP.pdf');
   };

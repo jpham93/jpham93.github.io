@@ -1,19 +1,28 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   Card,
-  Icon,
   Container,
   Header,
   Responsive
 } from "semantic-ui-react";
 import de_anza_logo from "../../../assets/images/de_anza_college_logo.svg";
 
+/**
+ * Container Style for Component
+ *
+ * @type {{display: string, marginBottom: string, justifyContent: string}}
+ */
 const containerStyle = {
   display: 'flex',
   justifyContent: 'flex-end',
   marginBottom: '1em',
 };
 
+/**
+ * Wrapper Style for card
+ *
+ * @type {{width: string, maxWidth: string}}
+ */
 const divStyle = {
   maxWidth: '750px',
   width: '100%',
@@ -30,6 +39,11 @@ const cardStyle = {
   boxShadow: 'none',
 };
 
+/**
+ * Computer Logo Style
+ *
+ * @type {{marginRight: string, width: string, marginTop: string, height: string}}
+ */
 const imgStyle = {
   marginTop: '55px',
   marginRight: '10px',
@@ -53,13 +67,14 @@ const headerLogoStyle = {
   marginBottom: '5px',
 };
 
+/**
+ * TutorExperience component
+ */
 export default function () {
-  const [isOpen, setOpen] = useState(false);
-
   return (
     <Container style={containerStyle}>
       <Responsive {...Responsive.onlyComputer}>
-        <img src={de_anza_logo} style={imgStyle}/>
+        <img src={de_anza_logo} style={imgStyle} alt='De Anza Logo'/>
       </Responsive>
       <div style={divStyle}>
         <Card style={cardStyle}>
@@ -67,7 +82,7 @@ export default function () {
             <Header as='h2' style={{color: 'var(--lightShade)'}}>
               De Anza College
               <Responsive {...Responsive.onlyTablet} style={{display: 'inline'}}>
-                <img src={de_anza_logo} style={headerLogoStyle}/>
+                <img src={de_anza_logo} style={headerLogoStyle} alt='De Anza Logo'/>
               </Responsive>
             </Header>
             <Header as='h3' style={{color: 'var(--lightShade)'}}>Computer Lab Volunteer Tutor</Header>
