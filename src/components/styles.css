@@ -25,8 +25,12 @@
 }
 
 /** Sidebar.js **/
-.sidebar-item:active {
-  border: none !important;
+#sidebar-menu {
+  overflow: hidden !important;
+}
+
+.sidebar-item {
+  border-bottom: none !important;
 }
 
 /** Footer.js **/

@@ -16,7 +16,7 @@ export default function () {
       <Form.Input label='Email' name='email'/>
       <Form.Input label='Subject' name='subject'/>
       <Form.TextArea style={{minHeight: '200px'}} label='Content' name='content'/>
-      <Form.Button color='green'><Icon name='send'/>Submit</Form.Button>
+      <Form.Button color='green' id='submit-button' textAlign='center'><Icon name='send'/>Submit</Form.Button>
     </Form>
   );
 }

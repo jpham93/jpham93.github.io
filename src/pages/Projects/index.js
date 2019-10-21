@@ -19,6 +19,8 @@ import './projects.css';
 import {project_logos} from './logos';
 import ModalTemplate from './Modal'
 
+const $ = window.$;
+
 /**
  * Projects Container Style
  *
@@ -95,6 +97,7 @@ const imgStyle = {
  */
 const modalStyle = {
   padding: '20px',
+  zIndex: '99',
 };
 
 /**
@@ -106,6 +109,40 @@ const buttonStyle = {
   bottom: '20px'
 };
 
+// list of exported objects to be injected into template and viewed as a modal.
+const projectComponents = [
+  {
+    component: Feedback,
+    img: project_logos.vta,
+    title: 'VTA Feedback App'
+  },
+  {
+    component: Pomodoro,
+    img: project_logos.pomodoro,
+    title: 'iOS Pomodoro Clock'
+  },
+  {
+    component: MHNLanding,
+    img: project_logos.mhn,
+    title: 'Magic Hair & Nails Landing Page'
+  },
+  {
+    component: YelpCamp,
+    img: project_logos.yelp_camp,
+    title: 'Yelp Camp'
+  },
+  {
+    component: Portfolio,
+    img: project_logos.jp,
+    title: 'My Web Portfolio'
+  },
+  {
+    component: FCC,
+    img: project_logos.fcc,
+    title: 'Free Code Camp Collections'
+  }
+];
+
 /**
  * Projects Page component
  *
@@ -113,41 +150,7 @@ const buttonStyle = {
  * page with summary and external links.
  */
 export default function () {
-  const [openKey, setOpen] = useState(false);
-
-  // list of exported objects to be injected into template and viewed as a modal.
-  const projectComponents = [
-    {
-      component: Feedback,
-      img: project_logos.vta,
-      title: 'VTA Feedback App'
-    },
-    {
-      component: Pomodoro,
-      img: project_logos.pomodoro,
-      title: 'iOS Pomodoro Clock'
-    },
-    {
-      component: MHNLanding,
-      img: project_logos.mhn,
-      title: 'Magic Hair & Nails Landing Page'
-    },
-    {
-      component: YelpCamp,
-      img: project_logos.yelp_camp,
-      title: 'Yelp Camp'
-    },
-    {
-      component: Portfolio,
-      img: project_logos.jp,
-      title: 'My Web Portfolio'
-    },
-    {
-      component: FCC,
-      img: project_logos.fcc,
-      title: 'Free Code Camp Collections'
-    }
-  ];
+  const [openKey, setOpen] = useState(-1);
 
   return (
     <Container style={projectsContainerStyle}>
@@ -157,7 +160,12 @@ export default function () {
           projectComponents.map((component, key) => {
             return (
               <Grid.Column key={key}>
-                <Card onClick={() => setOpen(key)} style={cardStyle} className='card-styling'>
+                <Card onClick={() => {
+                  // required to fix button
+                  if (openKey !== key) setOpen(key);
+                }}
+                      style={cardStyle}
+                      className='card-styling'>
                   <Reveal animated='move'>
                     <Reveal.Content visible style={visibleStyle}>
                       <img src={component.img} style={imgStyle}/>
@@ -171,14 +179,13 @@ export default function () {
                   <Modal
                     dimmer
                     open={openKey === key}
-                    onClose={() => setOpen(-1)}
                     closeIcon
+                    onClose={() => {
+                      setOpen(-1);
+                    }}
                     style={modalStyle}
                   >
                     {ModalTemplate(component.component)}
-                    <Button color='red' onClick={() => setOpen(-1)} style={buttonStyle}>
-                      <Icon name='close'/> Close
-                    </Button>
                   </Modal>
                 </Card>
               </Grid.Column>

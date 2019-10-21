@@ -18,10 +18,10 @@ export default {
   links:
     [
       {
-        content: 'Website',
-        icon: 'laptop',
+        content: 'Demo',
+        icon: 'computer',
         url: 'https://yelpcamp-jp93.herokuapp.com/',
-        color: 'blue',
+        color: 'green',
       },
       {
         content: 'Github',

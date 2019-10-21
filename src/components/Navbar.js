@@ -87,10 +87,10 @@ export default withRouter(function (props) {
    * @param {String} name of route to be pushed to history
    * selectPage helper function - changes route based on menu click
    */
-  const selectPage = (page) => props.history.push(page);
-
-  // if viewport width is smaller than 480,  always set the sidebar to false
-  // if (window.innerWidth > 480) setVisible(false);
+  const selectPage = (page) => {
+    setVisible(false);
+    props.history.push(page);
+  };
 
   return (
     <Menu icon='labeled' style={menuStyle} id='navbar' className={scrollTop > 0 ? 'navbar-animation' : ''}
@@ -104,6 +104,7 @@ export default withRouter(function (props) {
         <Sidebar
           visible={visible}
           setVisible={setVisible}
+          activeItem={activeItem}
           setActive={setActive}
           selectPage={selectPage}
         />

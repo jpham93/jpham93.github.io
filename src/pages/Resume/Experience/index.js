@@ -7,14 +7,15 @@ import {
 import VtaExperience from './VtaExperience';
 import HackathonExperience from './HackathonExperience';
 import TutorExperience from './TutorExperience'
+import './experience.css'
 
 /**
- * "Experience" Container
- * Parent Container for the entire functional component
+ * Experience container styling
+ *
+ * adds top and bottom spacing of the experience container.
  */
 const experienceContainer = {
   padding: '20px 0',
-  marginBottom: '4em',
 };
 
 /**
@@ -25,9 +26,9 @@ const experienceContainer = {
  */
 export default function () {
   return (
-    <Container fluid style={experienceContainer}>
-      <Header as='h2' textAlign='center'>
-        <Icon name='briefcase'/>
+    <Container fluid style={experienceContainer} id='experience-container'>
+      <Header as='h2'>
+        <Icon name='briefcase' style={{textIndent: '0.5em'}}/>
         <Header.Content>Experience</Header.Content>
       </Header>
       <VtaExperience />

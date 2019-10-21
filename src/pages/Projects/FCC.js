@@ -16,20 +16,20 @@ export default {
   stackList: ['react', 'd3', 'jquery', 'sass', 'material', 'bootstrap', 'html', 'css', 'js', 'node'],
   links: [
     {
-      content: 'FCC D3 Collection',
+      content: 'D3',
       icon: 'codepen',
       url: 'https://codepen.io/collection/XqmGJZ',
       color: 'black'
     },
 
     {
-      content: 'FCC Frond-end Libraries Collection',
+      content: 'Front-end',
       icon: 'codepen',
       url: 'https://codepen.io/collection/XgWgyy?cursor=ZD0wJm89MSZwPTEmdj0xOTEzMDQ1',
       color: 'black'
     },
     {
-      content: 'Github Profile',
+      content: 'Github',
       icon: 'github',
       url: 'https://github.com/jpham93',
       color :'orange'
