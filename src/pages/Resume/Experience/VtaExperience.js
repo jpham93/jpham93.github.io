@@ -90,7 +90,7 @@ export default function () {
             <Header as='h2' style={{color: 'var(--lightShade)'}}>
               VTA Internship
               <Responsive {...Responsive.onlyTablet} style={{display: 'inline'}}>
-                <img src={vta_logo} style={headerLogoStyle}/>
+                <img src={vta_logo} style={headerLogoStyle} alt='VTA Logo'/>
               </Responsive>
             </Header>
             <p style={{fontSize: '1.2em'}}>I am a full stack web developer intern. Here, I learn from
@@ -154,7 +154,7 @@ export default function () {
         </Transition.Group>
       </div>
       <Responsive {...Responsive.onlyComputer}>
-        <img src={vta_logo} style={logoStyle}/>
+        <img src={vta_logo} style={logoStyle} alt='VTA Logo'/>
       </Responsive>
     </Container>
   );

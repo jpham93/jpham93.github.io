@@ -4,7 +4,6 @@ import {
   Grid,
   Modal,
   Card,
-  Button,
   Reveal,
   Icon
 } from 'semantic-ui-react';
@@ -18,8 +17,6 @@ import FCC from './FCC'
 import './projects.css';
 import {project_logos} from './logos';
 import ModalTemplate from './Modal'
-
-const $ = window.$;
 
 /**
  * Projects Container Style
@@ -100,15 +97,6 @@ const modalStyle = {
   zIndex: '99',
 };
 
-/**
- * close button Styling
- */
-const buttonStyle = {
-  position: 'absolute',
-  right: '20px',
-  bottom: '20px'
-};
-
 // list of exported objects to be injected into template and viewed as a modal.
 const projectComponents = [
   {
@@ -168,7 +156,7 @@ export default function () {
                       className='card-styling'>
                   <Reveal animated='move'>
                     <Reveal.Content visible style={visibleStyle}>
-                      <img src={component.img} style={imgStyle}/>
+                      <img src={component.img} style={imgStyle} alt={component.title}/>
                     </Reveal.Content>
                     <Reveal.Content hidden style={hiddenStyle}>
                       <span style={{fontSize: '34px'}}>Read More <Icon

@@ -35,7 +35,7 @@ export default function ({title, description, stackList, links}) {
       <Header as='h2'>{title}</Header>
       <p>{description}</p>
       <div style={{marginBottom: '5px'}}>
-        {stackList.map((stack, key) => (<img src={brand_logos[stack]} style={brandStyle} key={key}/>))}
+        {stackList.map((stack, key) => (<img src={brand_logos[stack]} alt={stack} style={brandStyle} key={key}/>))}
       </div>
       <Button.Group>
         {
@@ -47,7 +47,6 @@ export default function ({title, description, stackList, links}) {
               color={link.color}
               key={key}
               disabled={link.disabled}
-              onClick={() => window.open(link.url)}
             />
           )
         }

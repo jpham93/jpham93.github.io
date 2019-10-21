@@ -32,11 +32,11 @@ const logoContainer = {
 
 export default function () {
   const links = [
-    {url: 'https://linkedin.com/in/james-pham-0293', img: linkedin},
-    {url: 'https://github.com/jpham93', img: github,},
-    {url: 'https://codepen.io/jamespham93', img: codepen},
-    {url: 'https://angel.co/jamespham93', img: angel},
-    {url: 'https://www.upwork.com/o/profiles/users/_~014a28d75d6c34fcd6/', img: upwork}
+    {url: 'https://linkedin.com/in/james-pham-0293', img: linkedin, alt: 'Linkedin'},
+    {url: 'https://github.com/jpham93', img: github, alt: 'Github'},
+    {url: 'https://codepen.io/jamespham93', img: codepen, alt: 'Codepen'},
+    {url: 'https://angel.co/jamespham93', img: angel, alt: 'Angel List'},
+    {url: 'https://www.upwork.com/o/profiles/users/_~014a28d75d6c34fcd6/', img: upwork, alt: 'Upwork'}
   ];
 
   return (
@@ -51,8 +51,8 @@ export default function () {
         <Container style={logoContainer}>
           {
             links.map((link, key) => (
-              <a href={link.url} target='_blank' key={key}>
-                <img src={link.img} className='logo'/>
+              <a href={link.url} target='_blank' rel='noopener noreferrer' key={key}>
+                <img src={link.img} alt={link.alt + ' Logo'} className='logo'/>
               </a>
             ))
           }
