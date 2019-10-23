@@ -54,7 +54,7 @@ export default function () {
         <Header as='h2' style={{fontSize: '0.6em', marginTop: '0'}}>My Name is <span
           style={{fontSize: '1.35em'}}>James Pham</span></Header>
         <Divider/>
-        <Header as='h3'>I am a Junior Full Stack Web Developer.</Header>
+        <Header as='h3'>I am a Junior Front-End Web Developer.</Header>
         <div className={'button-wrapper'}>
           <Button id='resume-btn' className={'button-style'} onClick={getResume}>Resume</Button>
         </div>

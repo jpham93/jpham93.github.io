@@ -88,6 +88,7 @@ export default withRouter(function (props) {
    */
   const selectPage = (page) => {
     setVisible(false);
+    window.scrollTo(0, 0); 
     props.history.push(page);
   };
 

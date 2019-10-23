@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import {CircleArrow as ScrollUpButton} from 'react-scroll-up-button';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button';
 import {
   Footer,
   Navbar,
+  NotFound
 } from './components';
 import {
   Resume,
@@ -13,6 +14,7 @@ import {
   About,
   Contact
 } from './pages';
+import { Loader } from 'semantic-ui-react';
 
 /**
  * main style
@@ -33,22 +35,44 @@ const scrollUpBtnStyle = {
   zIndex: '99',
 };
 
-function App() {
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div style={mainStyle}>
-        <Navbar/>
-        <ScrollUpButton style={scrollUpBtnStyle}/>
-        <Switch>
-          <Route path='/projects' component={Projects}/>
-          <Route path='/about' component={About}/>
-          <Route path='/contact' component={Contact}/>
-          <Route exact path='/' component={Resume}/>
-        </Switch>
-        <Footer attached='bottom'/>
-      </div>
-    </BrowserRouter>
-  );
+class App extends Component {
+  state = { loading: true };
+
+  componentDidMount = () => {
+    if (this.state.loading)
+      this.setState(() => {
+        setTimeout(() => console.log('Loading DOM'), 10000);
+        return { loading: false }
+      });
+  }
+
+  render() {
+    const { loading } = this.state;
+
+    return (
+      <>
+        {
+          loading
+            ? <Loader active>Loading</Loader>
+            : <BrowserRouter basename={process.env.PUBLIC_URL}>
+              <div style={mainStyle}>
+                <Navbar/>
+                <ScrollUpButton style={scrollUpBtnStyle}/>
+                <Switch>
+                  <Route path='/projects' component={Projects}/>
+                  <Route path='/about' component={About}/>
+                  <Route path='/contact' component={Contact}/>
+                  <Route exact path='/' component={Resume}/>
+                  <Route path='*' component={NotFound}/>
+                </Switch>
+                <Footer attached='bottom'/>
+              </div>
+            </BrowserRouter>
+        }
+      </>
+    )
+      ;
+  }
 }
 
 export default App;
