@@ -41,7 +41,6 @@ class App extends Component {
   componentDidMount = () => {
     if (this.state.loading)
       this.setState(() => {
-        setTimeout(() => console.log('Loading DOM'), 10000);
         return { loading: false }
       });
   }
