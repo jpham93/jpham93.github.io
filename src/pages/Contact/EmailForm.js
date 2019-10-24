@@ -11,7 +11,7 @@ const formStyle = {
 
 export default function () {
   return (
-    <Form action='https://formspree.io/jamespham93' method="POST" style={formStyle}>
+    <Form action='https://formspree.io/jamespham93@yahoo.com' method="POST" style={formStyle}>
       <Form.Input label='Name' name='name' required/>
       <Form.Input label='Email' name='email' required/>
       <Form.Input label='Subject' name='subject' required/>

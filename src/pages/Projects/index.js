@@ -139,7 +139,7 @@ const projectComponents = [
  */
 export default function () {
   const [openKey, setOpen] = useState(-1);
-  const [loadImages, setImages] = useState()
+  const [loadImages, setImages] = useState();
 
   return (
     <Container style={projectsContainerStyle}>
