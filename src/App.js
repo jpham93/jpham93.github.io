@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -43,7 +43,7 @@ class App extends Component {
       this.setState(() => {
         return { loading: false }
       });
-  }
+  };
 
   render() {
     const { loading } = this.state;
@@ -57,13 +57,15 @@ class App extends Component {
               <div style={mainStyle}>
                 <Navbar/>
                 <ScrollUpButton style={scrollUpBtnStyle}/>
-                <Switch>
-                  <Route path='/projects' component={Projects}/>
-                  <Route path='/about' component={About}/>
-                  <Route path='/contact' component={Contact}/>
-                  <Route exact path='/' component={Resume}/>
-                  <Route path='*' component={NotFound}/>
-                </Switch>
+                <Suspense fallback={<Loader inverted>Loading</Loader>}>
+                  <Switch>
+                    <Route exact path='/projects' component={Projects}/>
+                    <Route exact path='/about' component={About}/>
+                    <Route exact path='/contact' component={Contact}/>
+                    <Route exact path='/' component={Resume}/>
+                    <Route exact path='*' component={NotFound}/>
+                  </Switch>
+                </Suspense>
                 <Footer attached='bottom'/>
               </div>
             </BrowserRouter>
