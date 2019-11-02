@@ -10,11 +10,12 @@ import {
 } from './components';
 import {
   Resume,
-  Projects,
   About,
-  Contact
 } from './pages';
 import { Loader } from 'semantic-ui-react';
+
+const Projects = React.lazy(() => import('./pages/Projects'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 /**
  * main style
@@ -36,17 +37,17 @@ const scrollUpBtnStyle = {
 };
 
 class App extends Component {
-  state = { loading: true };
+  state = {loading: true};
 
   componentDidMount = () => {
     if (this.state.loading)
       this.setState(() => {
-        return { loading: false }
+        return {loading: false}
       });
   };
 
   render() {
-    const { loading } = this.state;
+    const {loading} = this.state;
 
     return (
       <>
@@ -71,8 +72,7 @@ class App extends Component {
             </BrowserRouter>
         }
       </>
-    )
-      ;
+    );
   }
 }
 
