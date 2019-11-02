@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -10,11 +10,12 @@ import {
 } from './components';
 import {
   Resume,
-  Projects,
   About,
-  Contact
 } from './pages';
 import { Loader } from 'semantic-ui-react';
+
+const Projects = React.lazy(() => import('./pages/Projects'));
+const Contact = React.lazy(() => import('./pages/Contact'));
 
 /**
  * main style
@@ -36,17 +37,17 @@ const scrollUpBtnStyle = {
 };
 
 class App extends Component {
-  state = { loading: true };
+  state = {loading: true};
 
   componentDidMount = () => {
     if (this.state.loading)
       this.setState(() => {
-        return { loading: false }
+        return {loading: false}
       });
   }
 
   render() {
-    const { loading } = this.state;
+    const {loading} = this.state;
 
     return (
       <>
@@ -58,19 +59,20 @@ class App extends Component {
                 <Navbar/>
                 <ScrollUpButton style={scrollUpBtnStyle}/>
                 <Switch>
-                  <Route path='/projects' component={Projects}/>
-                  <Route path='/about' component={About}/>
-                  <Route path='/contact' component={Contact}/>
-                  <Route exact path='/' component={Resume}/>
-                  <Route path='*' component={NotFound}/>
+                  <Suspense fallback={<Loader inverted>Loading</Loader>}>
+                    <Route path='/projects' component={Projects}/>
+                    <Route path='/about' component={About}/>
+                    <Route path='/contact' component={Contact}/>
+                    <Route exact path='/' component={Resume}/>
+                    <Route path='*' component={NotFound}/>
+                  </Suspense>
                 </Switch>
                 <Footer attached='bottom'/>
               </div>
             </BrowserRouter>
         }
       </>
-    )
-      ;
+    );
   }
 }
 
