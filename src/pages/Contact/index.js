@@ -28,7 +28,7 @@ const logoContainer = {
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'space-evenly',
-}
+};
 
 export default function () {
   const links = [
