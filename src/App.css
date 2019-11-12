@@ -28,3 +28,25 @@
   --footerHeight: 40px;
   --verticalPadding: 6rem 0;
 }
+
+/*
+  Transition Classes courtesy of:
+  https://medium.com/@khwsc1/step-by-step-guide-of-simple-routing-transition-effect-for-react-with-react-router-v4-and-9152db1566a0
+*/
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 700ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 700ms ease-in;
+}

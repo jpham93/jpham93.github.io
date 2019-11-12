@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Grid,
@@ -15,7 +15,7 @@ import MHNLanding from './MHNLanding';
 import Pomodoro from './Pomodoro';
 import FCC from './FCC'
 import './projects.css';
-import {project_logos} from './logos';
+import { project_logos } from './logos';
 import ModalTemplate from './Modal'
 
 /**
@@ -139,7 +139,6 @@ const projectComponents = [
  */
 export default function () {
   const [openKey, setOpen] = useState(-1);
-  const [loadImages, setImages] = useState();
 
   return (
     <Container style={projectsContainerStyle}>

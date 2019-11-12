@@ -1,8 +1,9 @@
-import React, { Component, Suspense } from 'react';
+import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 import { CircleArrow as ScrollUpButton } from 'react-scroll-up-button';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import {
   Footer,
   Navbar,
@@ -11,11 +12,9 @@ import {
 import {
   Resume,
   About,
+  Projects,
+  Contact,
 } from './pages';
-import { Loader } from 'semantic-ui-react';
-
-const Projects = React.lazy(() => import('./pages/Projects'));
-const Contact = React.lazy(() => import('./pages/Contact'));
 
 /**
  * main style
@@ -36,44 +35,41 @@ const scrollUpBtnStyle = {
   zIndex: '99',
 };
 
-class App extends Component {
-  state = {loading: true};
+function MainWrapper({location}) {
+  return (
+    <div style={mainStyle} classNames='fade-enter fade-enter-active fade-exit fade-exit-active'>
+      <TransitionGroup>
+        <CSSTransition
+          key={location.key}
+          timeout={{enter: 700, exit: 700}}
+          classNames='fade'
+        >
+          <Switch>
+            <Route exact path='/projects' component={Projects}/>
+            <Route exact path='/about' component={About}/>
+            <Route exact path='/contact' component={Contact}/>
+            <Route exact path='/' component={Resume}/>
+            <Route path='*' component={NotFound}/>
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>
+  );
+}
 
-  componentDidMount = () => {
-    if (this.state.loading)
-      this.setState(() => {
-        return {loading: false}
-      });
-  };
+const Main = withRouter(MainWrapper);
 
-  render() {
-    const {loading} = this.state;
-
-    return (
-      <>
-        {
-          loading
-            ? <Loader active>Loading</Loader>
-            : <BrowserRouter basename={process.env.PUBLIC_URL}>
-              <div style={mainStyle}>
-                <Navbar/>
-                <ScrollUpButton style={scrollUpBtnStyle}/>
-                <Suspense fallback={<Loader inverted>Loading</Loader>}>
-                  <Switch>
-                    <Route exact path='/projects' component={Projects}/>
-                    <Route exact path='/about' component={About}/>
-                    <Route exact path='/contact' component={Contact}/>
-                    <Route exact path='/' component={Resume}/>
-                    <Route exact path='*' component={NotFound}/>
-                  </Switch>
-                </Suspense>
-                <Footer attached='bottom'/>
-              </div>
-            </BrowserRouter>
-        }
-      </>
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <div style={mainStyle}>
+        <Navbar/>
+        <Main/>
+        <ScrollUpButton style={scrollUpBtnStyle}/>
+        <Footer attached='bottom'/>
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
