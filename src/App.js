@@ -45,7 +45,7 @@ function App() {
           <Route exact path='/about' component={About}/>
           <Route exact path='/contact' component={Contact}/>
           <Route exact path='/' component={Resume}/>
-          <Route exact path='*' component={NotFound}/>
+          <Route path='*' component={NotFound}/>
         </Switch>
         <Footer attached='bottom'/>
       </div>
