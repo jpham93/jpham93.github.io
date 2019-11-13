@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Container,
   Grid,
   Modal,
   Card,
   Reveal,
-  Icon
+  Icon,
+  Loader,
+  Dimmer
 } from 'semantic-ui-react';
 import Introduction from './Introduction';
 import Portfolio from './Portfolio';
@@ -139,48 +141,67 @@ const projectComponents = [
  */
 export default function () {
   const [openKey, setOpen] = useState(-1);
+  const [readyImages, setReadyImages] = useState(0);
+
+  useEffect(() => {
+    projectComponents.map(({component, img, title}) => {
+      const image = new Image();
+      image.src = img;
+      image.onload = () => setReadyImages(readyImages + 1);
+    })
+  }, [readyImages]);
 
   return (
     <Container style={projectsContainerStyle}>
-      <Introduction/>
-      <Grid columns={3} doubling style={gridStyle} stackable>
-        {
-          projectComponents.map((component, key) => {
-            return (
-              <Grid.Column key={key}>
-                <Card onClick={() => {
-                  // required to fix button
-                  if (openKey !== key) setOpen(key);
-                }}
-                      style={cardStyle}
-                      className='card-styling'>
-                  <Reveal animated='move'>
-                    <Reveal.Content visible style={visibleStyle}>
-                      <img src={component.img} style={imgStyle} alt={component.title}/>
-                    </Reveal.Content>
-                    <Reveal.Content hidden style={hiddenStyle}>
+      {
+        readyImages === projectComponents.length
+          ?
+          <>
+            <Introduction/>
+            <Grid columns={3} doubling style={gridStyle} stackable>
+              {
+                projectComponents.map((component, key) => {
+                  return (
+                    <Grid.Column key={key}>
+                      <Card onClick={() => {
+                        // required to fix button
+                        if (openKey !== key) setOpen(key);
+                      }}
+                            style={cardStyle}
+                            className='card-styling'>
+                        <Reveal animated='move'>
+                          <Reveal.Content visible style={visibleStyle}>
+                            <img src={component.img} style={imgStyle} alt={component.title}/>
+                          </Reveal.Content>
+                          <Reveal.Content hidden style={hiddenStyle}>
                       <span style={{fontSize: '34px'}}>Read More <Icon
                         name='arrow alternate circle right outline'/></span>
-                    </Reveal.Content>
-                  </Reveal>
-                  {/*Had to assign key to open in order to have the correct modal pop up*/}
-                  <Modal
-                    dimmer
-                    open={openKey === key}
-                    closeIcon
-                    onClose={() => {
-                      setOpen(-1);
-                    }}
-                    style={modalStyle}
-                  >
-                    {ModalTemplate(component.component)}
-                  </Modal>
-                </Card>
-              </Grid.Column>
-            )
-          })
-        }
-      </Grid>
+                          </Reveal.Content>
+                        </Reveal>
+                        {/*Had to assign key to open in order to have the correct modal pop up*/}
+                        <Modal
+                          dimmer
+                          open={openKey === key}
+                          closeIcon
+                          onClose={() => {
+                            setOpen(-1);
+                          }}
+                          style={modalStyle}
+                        >
+                          {ModalTemplate(component.component)}
+                        </Modal>
+                      </Card>
+                    </Grid.Column>
+                  )
+                })
+              }
+            </Grid>
+          </>
+          :
+          <Dimmer inverted active>
+          <Loader inverted>Loading...</Loader>
+          </Dimmer>
+      }
     </Container>
   );
 }
