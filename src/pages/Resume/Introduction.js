@@ -49,6 +49,7 @@ export default function () {
 
   return (
     <Container style={introContainer}>
+
       <Container id='intro-text-container'>
         <Header as='h1' style={{fontSize: '0.5em', lineHeight: '20%'}}>Hi!</Header>
         <Header as='h2' style={{fontSize: '0.6em', marginTop: '0'}}>My Name is <span
@@ -62,9 +63,11 @@ export default function () {
           <Button id='linkedin-btn' className={'button-style'} onClick={openLinkedin}>Linkedin</Button>
         </div>
       </Container>
+
       <Responsive minWidth={768} style={{marginRight: 'auto'}}>
         <div style={imgStyle}/>
       </Responsive>
+
     </Container>
   );
 }
