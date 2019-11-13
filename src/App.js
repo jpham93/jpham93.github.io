@@ -35,13 +35,20 @@ const scrollUpBtnStyle = {
   zIndex: '99',
 };
 
+/**
+ * MainWrapper Component
+ *
+ *
+ *
+ * @param location - prop of the route to identify which class to apply
+ */
 function MainWrapper({location}) {
   return (
     <div style={mainStyle} classNames='fade-enter fade-enter-active fade-exit fade-exit-active'>
       <TransitionGroup>
         <CSSTransition
           key={location.key}
-          timeout={{enter: 700, exit: 700}}
+          timeout={{enter: 300, exit: 300}}
           classNames='fade'
         >
           <Switch>

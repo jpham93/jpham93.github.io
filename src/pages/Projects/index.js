@@ -152,17 +152,20 @@ export default function () {
                   // required to fix button
                   if (openKey !== key) setOpen(key);
                 }}
-                      style={cardStyle}
-                      className='card-styling'>
+                  style={cardStyle}
+                  className='card-styling'
+                >
+
                   <Reveal animated='move'>
                     <Reveal.Content visible style={visibleStyle}>
-                      <img src={component.img} style={imgStyle} alt={component.title}/>
+                      <img rel="preload" src={component.img} style={imgStyle} alt={component.title}/>
                     </Reveal.Content>
                     <Reveal.Content hidden style={hiddenStyle}>
                       <span style={{fontSize: '34px'}}>Read More <Icon
                         name='arrow alternate circle right outline'/></span>
                     </Reveal.Content>
                   </Reveal>
+
                   {/*Had to assign key to open in order to have the correct modal pop up*/}
                   <Modal
                     dimmer
@@ -175,6 +178,7 @@ export default function () {
                   >
                     {ModalTemplate(component.component)}
                   </Modal>
+
                 </Card>
               </Grid.Column>
             )

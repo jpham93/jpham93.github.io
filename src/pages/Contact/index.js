@@ -52,7 +52,7 @@ export default function () {
           {
             links.map((link, key) => (
               <a href={link.url} target='_blank' rel='noopener noreferrer' key={key}>
-                <img src={link.img} alt={link.alt + ' Logo'} className='logo'/>
+                <img rel="preload" src={link.img} alt={link.alt + ' Logo'} className='logo'/>
               </a>
             ))
           }
