@@ -146,12 +146,14 @@ export default function () {
   // Preload images by manually creating new Image objects &
   // adding to numLoaded upon finished loaded images
   useLayoutEffect(() => {
-    projectComponents.map(({component, img, title}) => {
+    projectComponents.forEach(({component, img, title}) => {
       const image = new Image();
       image.src = img;
-      if(numLoaded < projectComponents.length)
+      if (numLoaded < projectComponents.length)
         image.onload = () => setNumLoaded(numLoaded + 1);
-    })
+    });
+    // terminate updating states with empty callback
+    return () => null;
   }, [numLoaded]);
 
   return (
@@ -162,6 +164,7 @@ export default function () {
           <>
             <Introduction/>
             <Grid columns={3} doubling style={gridStyle} stackable>
+
               {
                 projectComponents.map((component, key) => {
                   return (
@@ -170,17 +173,20 @@ export default function () {
                         // required to fix button
                         if (openKey !== key) setOpen(key);
                       }}
-                            style={cardStyle}
-                            className='card-styling'>
+                        style={cardStyle}
+                        className='card-styling'
+                      >
+
                         <Reveal animated='move'>
                           <Reveal.Content visible style={visibleStyle}>
                             <img src={component.img} style={imgStyle} alt={component.title}/>
                           </Reveal.Content>
                           <Reveal.Content hidden style={hiddenStyle}>
-                      <span style={{fontSize: '34px'}}>Read More <Icon
-                        name='arrow alternate circle right outline'/></span>
+                            <span style={{fontSize: '34px'}}>Read More <Icon
+                            name='arrow alternate circle right outline'/></span>
                           </Reveal.Content>
                         </Reveal>
+
                         {/*Had to assign key to open in order to have the correct modal pop up*/}
                         <Modal
                           dimmer
@@ -198,11 +204,12 @@ export default function () {
                   )
                 })
               }
+
             </Grid>
           </>
           :
           <Dimmer inverted active>
-          <Loader inverted>Loading...</Loader>
+            <Loader inverted>Loading...</Loader>
           </Dimmer>
       }
     </Container>

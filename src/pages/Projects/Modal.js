@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
   Button,
   Container,
   Header,
+  Loader,
+  Dimmer
 } from 'semantic-ui-react';
-import {brand_logos} from "./logos";
+import { brand_logos } from "./logos";
 
 /**
  * Brand Styling
@@ -31,26 +33,34 @@ const brandStyle = {
  */
 export default function ({title, description, stackList, links}) {
   return (
-    <Container>
-      <Header as='h2'>{title}</Header>
-      <p>{description}</p>
-      <div style={{marginBottom: '5px'}}>
-        {stackList.map((stack, key) => (<img src={brand_logos[stack]} alt={stack} style={brandStyle} key={key}/>))}
-      </div>
-      <Button.Group>
-        {
-          links.map((link, key) =>
-            <Button
-              content={link.content}
-              icon={link.icon}
-              onClick={() => window.open(link.url)}
-              color={link.color}
-              key={key}
-              disabled={link.disabled}
-            />
-          )
-        }
-      </Button.Group>
-    </Container>
+    1 === 1
+      ?
+      <Container>
+        <Header as='h2'>{title}</Header>
+        <p>{description}</p>
+        <div style={{marginBottom: '5px'}}>
+          {stackList.map((stack, key) => (
+            <img src={brand_logos[stack]} alt={stack} style={brandStyle} key={key}/>
+          ))}
+        </div>
+        <Button.Group>
+          {
+            links.map((link, key) =>
+              <Button
+                content={link.content}
+                icon={link.icon}
+                onClick={() => window.open(link.url)}
+                color={link.color}
+                key={key}
+                disabled={link.disabled}
+              />
+            )
+          }
+        </Button.Group>
+      </Container>
+      :
+      <Dimmer inverted active>
+        <Loader inverted>Loading...</Loader>
+      </Dimmer>
   );
 }
