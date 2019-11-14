@@ -41,17 +41,20 @@ const links = [
 export default function () {
   const [numLoaded, setNumLoaded] = useState(0);
 
+  let currentImg;
+
+  if(links[numLoaded]) {
+    currentImg = links[numLoaded].img;
+  }
+
   // Preload images by manually creating new Image objects &
   // adding to numLoaded upon finished loaded images
   useLayoutEffect(() => {
-    links.forEach(({img}) => {
-      const image = new Image();
-      image.src = img;
-      if (numLoaded < links.length)
-        image.onload = () => setNumLoaded(numLoaded + 1);
-    });
+    const image = new Image();
+    image.src = currentImg;
+    image.onload = () => setNumLoaded(numLoaded + 1);
     return () => null;
-  }, [numLoaded]);
+  });
 
   return (
     <Container fluid>

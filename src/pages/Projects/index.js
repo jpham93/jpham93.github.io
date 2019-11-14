@@ -139,22 +139,26 @@ const projectComponents = [
  * Contains all of the projects as components within this
  * page with summary and external links.
  */
-export default function () {
+export default function() {
   const [openKey, setOpen] = useState(-1);
   const [numLoaded, setNumLoaded] = useState(0);
+
+  let currentImg;
+
+  // ensure that components are not null
+  if(projectComponents[numLoaded]) {
+    currentImg = projectComponents[numLoaded].img;
+  }
 
   // Preload images by manually creating new Image objects &
   // adding to numLoaded upon finished loaded images
   useLayoutEffect(() => {
-    projectComponents.forEach(({component, img, title}) => {
-      const image = new Image();
-      image.src = img;
-      if (numLoaded < projectComponents.length)
-        image.onload = () => setNumLoaded(numLoaded + 1);
-    });
+    const image = new Image();
+    image.src = currentImg;
+    image.onload = () => setNumLoaded(numLoaded + 1);
     // terminate updating states with empty callback
     return () => null;
-  }, [numLoaded]);
+  });
 
   return (
     <Container style={projectsContainerStyle}>

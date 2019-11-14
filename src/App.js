@@ -44,7 +44,7 @@ const scrollUpBtnStyle = {
  */
 function MainWrapper({location}) {
   return (
-    <div style={mainStyle} classNames='fade-enter fade-enter-active fade-exit fade-exit-active'>
+    <div style={mainStyle}>
       <TransitionGroup>
         <CSSTransition
           key={location.key}
