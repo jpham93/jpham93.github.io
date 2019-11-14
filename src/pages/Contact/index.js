@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
-  Container,
-  Header,
+  Container, Dimmer,
+  Header, Loader,
 } from 'semantic-ui-react';
 import './contact.css';
 import EmailForm from './EmailForm';
@@ -30,34 +30,60 @@ const logoContainer = {
   justifyContent: 'space-evenly',
 };
 
+const links = [
+  {url: 'https://linkedin.com/in/james-pham-0293', img: linkedin, alt: 'Linkedin'},
+  {url: 'https://github.com/jpham93', img: github, alt: 'Github'},
+  {url: 'https://codepen.io/jamespham93', img: codepen, alt: 'Codepen'},
+  {url: 'https://angel.co/jamespham93', img: angel, alt: 'Angel List'},
+  {url: 'https://www.upwork.com/o/profiles/users/_~014a28d75d6c34fcd6/', img: upwork, alt: 'Upwork'}
+];
+
 export default function () {
-  const links = [
-    {url: 'https://linkedin.com/in/james-pham-0293', img: linkedin, alt: 'Linkedin'},
-    {url: 'https://github.com/jpham93', img: github, alt: 'Github'},
-    {url: 'https://codepen.io/jamespham93', img: codepen, alt: 'Codepen'},
-    {url: 'https://angel.co/jamespham93', img: angel, alt: 'Angel List'},
-    {url: 'https://www.upwork.com/o/profiles/users/_~014a28d75d6c34fcd6/', img: upwork, alt: 'Upwork'}
-  ];
+  const [numLoaded, setNumLoaded] = useState(0);
+
+  // Preload images by manually creating new Image objects &
+  // adding to numLoaded upon finished loaded images
+  useLayoutEffect(() => {
+    links.forEach(({img}) => {
+      const image = new Image();
+      image.src = img;
+      if (numLoaded < links.length)
+        image.onload = () => setNumLoaded(numLoaded + 1);
+    });
+    return () => null;
+  }, [numLoaded]);
 
   return (
     <Container fluid>
       <Container style={contactContainer}>
-        <Header as='h1' textAlign='center'>Contact</Header>
-        <p style={{fontSize: '1.2em'}}>
-          If you would like to contact me, send me a message with the contact form below. Or, if you prefer another
-          method, you can explore my other web profiles with the links below and message me through those platforms.
-          Thank you!
-        </p>
-        <Container style={logoContainer}>
-          {
-            links.map((link, key) => (
-              <a href={link.url} target='_blank' rel='noopener noreferrer' key={key}>
-                <img rel="preload" src={link.img} alt={link.alt + ' Logo'} className='logo'/>
-              </a>
-            ))
-          }
-        </Container>
-        <EmailForm/>
+        {
+          numLoaded === links.length
+            ?
+            <>
+              <Header as='h1' textAlign='center'>Contact</Header>
+              < p style={{fontSize: '1.2em'}}>
+                If you would like to contact me, send me a message with the contact form below. Or, if you prefer
+                another
+                method, you can explore my other web profiles with the links below and message me through those
+                platforms.
+                Thank you!
+              </p>
+              <Container style={logoContainer}>
+                {
+                  links.map((link, key) => (
+                    <a href={link.url} target='_blank' rel='noopener noreferrer' key={key}>
+                      <img src={link.img} alt={link.alt + ' Logo'} className='logo'/>
+                    </a>
+                  ))
+                }
+              </Container>
+              <EmailForm/>
+            </>
+            :
+            <Dimmer inverted active>
+              <Loader inverted>Loading...</Loader>
+            </Dimmer>
+        }
       </Container>
     </Container>
   );
