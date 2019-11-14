@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import {
   Container,
   Grid,
@@ -141,20 +141,23 @@ const projectComponents = [
  */
 export default function () {
   const [openKey, setOpen] = useState(-1);
-  const [readyImages, setReadyImages] = useState(0);
+  const [numLoaded, setNumLoaded] = useState(0);
 
-  useEffect(() => {
+  // Preload images by manually creating new Image objects &
+  // adding to numLoaded upon finished loaded images
+  useLayoutEffect(() => {
     projectComponents.map(({component, img, title}) => {
       const image = new Image();
       image.src = img;
-      image.onload = () => setReadyImages(readyImages + 1);
+      if(numLoaded < projectComponents.length)
+        image.onload = () => setNumLoaded(numLoaded + 1);
     })
-  }, [readyImages]);
+  }, [numLoaded]);
 
   return (
     <Container style={projectsContainerStyle}>
       {
-        readyImages === projectComponents.length
+        numLoaded === projectComponents.length
           ?
           <>
             <Introduction/>
