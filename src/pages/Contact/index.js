@@ -30,6 +30,10 @@ const logoContainer = {
   justifyContent: 'space-evenly',
 };
 
+const dimmerStyle = {
+  height: '100%'
+};
+
 const links = [
   {url: 'https://linkedin.com/in/james-pham-0293', img: linkedin, alt: 'Linkedin'},
   {url: 'https://github.com/jpham93', img: github, alt: 'Github'},
@@ -83,7 +87,7 @@ export default function () {
               <EmailForm/>
             </>
             :
-            <Dimmer inverted active>
+            <Dimmer inverted active style={dimmerStyle}>
               <Loader inverted>Loading...</Loader>
             </Dimmer>
         }

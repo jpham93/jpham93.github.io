@@ -99,6 +99,10 @@ const modalStyle = {
   zIndex: '99',
 };
 
+const dimmerStyle = {
+  height: '100%'
+};
+
 // list of exported objects to be injected into template and viewed as a modal.
 const projectComponents = [
   {
@@ -212,7 +216,7 @@ export default function() {
             </Grid>
           </>
           :
-          <Dimmer inverted active>
+          <Dimmer styled={dimmerStyle} inverted active>
             <Loader inverted>Loading...</Loader>
           </Dimmer>
       }
