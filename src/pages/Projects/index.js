@@ -100,7 +100,7 @@ const modalStyle = {
 };
 
 const dimmerStyle = {
-  height: '100%'
+  height: 'calc(34px + 100%)'
 };
 
 // list of exported objects to be injected into template and viewed as a modal.
