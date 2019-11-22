@@ -31,7 +31,7 @@ const logoContainer = {
 };
 
 const dimmerStyle = {
-  height: 'calc(34px + 100%)'
+  height: 'calc(46px + 100%)'
 };
 
 const links = [
