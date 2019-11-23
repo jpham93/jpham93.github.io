@@ -100,7 +100,7 @@ const modalStyle = {
 };
 
 const dimmerStyle = {
-  height: 'calc(46px + 100%)'
+  height: 'calc(30px + 100%)'
 };
 
 // list of exported objects to be injected into template and viewed as a modal.
@@ -167,7 +167,7 @@ export default function() {
   return (
     <Container style={projectsContainerStyle}>
       {
-        numLoaded === projectComponents.length
+        numLoaded !== projectComponents.length
           ?
           <>
             <Introduction/>
@@ -216,7 +216,7 @@ export default function() {
             </Grid>
           </>
           :
-          <Dimmer styled={dimmerStyle} inverted active>
+          <Dimmer style={dimmerStyle} inverted active>
             <Loader inverted>Loading...</Loader>
           </Dimmer>
       }
