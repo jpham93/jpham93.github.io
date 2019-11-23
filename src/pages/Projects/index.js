@@ -167,7 +167,7 @@ export default function() {
   return (
     <Container style={projectsContainerStyle}>
       {
-        numLoaded !== projectComponents.length
+        numLoaded === projectComponents.length
           ?
           <>
             <Introduction/>
