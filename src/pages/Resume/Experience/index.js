@@ -7,7 +7,7 @@ import {
 import VtaExperience from './VtaExperience';
 import HackathonExperience from './HackathonExperience';
 import TutorExperience from './TutorExperience'
-import './experience.css'
+import './Experience.css'
 
 /**
  * Experience container styling

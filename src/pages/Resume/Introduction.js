@@ -8,7 +8,7 @@ import {
   Placeholder
 } from 'semantic-ui-react';
 import headshot from '../../assets/images/headshot.png';
-import './resume.css';
+import './Resume.css';
 
 /**
  * Header Container Style

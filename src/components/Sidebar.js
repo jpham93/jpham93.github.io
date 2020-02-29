@@ -4,7 +4,7 @@ import {
   Menu,
   Icon,
 } from 'semantic-ui-react';
-import './styles.css';
+import './Components.css';
 
 /**
  * Sidebar style

@@ -4,7 +4,7 @@ import {
   Icon,
   Button,
 } from 'semantic-ui-react';
-import './styles.css';
+import './Components.css';
 
 /**
  * Footer Styling

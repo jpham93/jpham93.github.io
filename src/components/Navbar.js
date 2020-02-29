@@ -7,7 +7,7 @@ import {
 } from 'semantic-ui-react';
 import {withRouter} from 'react-router-dom';
 import Sidebar from './Sidebar';
-import './styles.css';
+import './Components.css';
 
 /**
  * Menu Style

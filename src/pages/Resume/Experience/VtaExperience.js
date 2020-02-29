@@ -9,7 +9,7 @@ import {
 } from "semantic-ui-react";
 import vta_logo from "../../../assets/images/vta_logo_2017.svg";
 import devops_handbook from "../../../assets/images/devops_handbook.png";
-import './experience.css';
+import './Experience.css';
 
 const containerStyle = {
   display: 'flex',

@@ -6,7 +6,7 @@ import {
   Card,
   Grid,
 } from 'semantic-ui-react';
-import './resume.css';
+import './Resume.css';
 
 /**
  * Technical Container

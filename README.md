@@ -1,4 +1,20 @@
+# My Portfolio
+---
+> Welcome to James Pham's portfolio page repo!
+> This project was made with React!
+
+## Summary
+I used the Semantic-UI React library to create this website. The code incorporates modern React syntax 
+including hooks and update-to-date ES6 syntax. As for styling, I went with the older JSX styling syntax, because
+I wanted to keep all code compartmentalized for each component. However, similar to Angular's component tree,
+each main component has its own directory with helper components and CSS pages to supplement the main parent
+component.
+
+An example of a component tree can be seen below:
+![Contact Page Directory Example](src/assets/images/contact_page_dir.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
@@ -37,32 +53,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## References
+- You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting
+-started).
+- To learn React, check out the [React documentation](https://reactjs.org/).
+- 

@@ -3,7 +3,7 @@ import {
   Container, Dimmer,
   Header, Loader,
 } from 'semantic-ui-react';
-import './contact.css';
+import './Contact.css';
 import EmailForm from './EmailForm';
 import linkedin from '../../assets/brand-logos/linkedin.svg';
 import codepen from '../../assets/brand-logos/codepen.svg';
